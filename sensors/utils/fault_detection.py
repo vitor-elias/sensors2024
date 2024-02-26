@@ -192,10 +192,10 @@ def visualise_subgraphs_data(df):
         fig.show()
 
 
-def visualise_mismatch_map(nodes_input, min_value=-np.inf, max_value=np.inf, single_nodes=False, color='mismatch',
-                           colormap = px.colors.diverging.oxy, zoom=15, range_color = None, opacity=1,
-                           size=None, size_max = None, animation_frame=None, hover_data=[None],
-                           title=None, recenter = None, transparent=False,
+def visualise_mismatch_map(nodes_input, min_value=-np.inf, max_value=np.inf, single_nodes=False, color='smoothed',
+                           colormap = px.colors.diverging.oxy, zoom=15, range_color = None, opacity=1, recenter = None,
+                           size=None, size_max = None, animation_frame=None, hover_data=[None], title=None,
+                           transparent=False,
                            figsize=(1200,800), renderer=None, mapbox_style='carto-positron', savehtml=None):
     
     
@@ -382,7 +382,7 @@ def relevant_neighborhood(df_orig, column_name, range_meters=15, lower=0, upper 
 def plot_selected_map(df_orig, column_name, selected_pixels, range_meters=15, color='smoothed', size=None,title=None,
                            colormap = px.colors.diverging.oxy, zoom=15, range_color = None,only_relevant=False, 
                            size_max = None, hover_data=None, figsize=(1200,800), recenter=None, transparent=False,
-                           animation_frame='timestamp', renderer=None, mapbox_style='carto-positron', plot=True):
+                           animation_frame='timestamp', renderer=None, mapbox_style='carto-positron'):
     
     df = df_orig.copy()
 
@@ -413,11 +413,11 @@ def plot_selected_map(df_orig, column_name, selected_pixels, range_meters=15, co
     if hover_data is None:
         hover_data = [column_name, 'group']
 
-    if plot:
-        visualise_mismatch_map(df_relevant, range_color=range_color, color=color, colormap=colormap, size=size,
-                            size_max=size_max, hover_data = hover_data, recenter=recenter, title=title,
-                            animation_frame=animation_frame, zoom=zoom, figsize=figsize, transparent=transparent,
-                            renderer=renderer, mapbox_style=mapbox_style)
+ 
+    visualise_mismatch_map(df_relevant, range_color=range_color, color=color, colormap=colormap, size=size,
+                        size_max=size_max, hover_data = hover_data, recenter=recenter, title=title,
+                        animation_frame=animation_frame, zoom=zoom, figsize=figsize, transparent=transparent,
+                        renderer=renderer, mapbox_style=mapbox_style)
 
 
 
