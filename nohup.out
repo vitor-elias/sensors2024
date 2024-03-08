@@ -1,0 +1,19 @@
+Using cuda:0
+log dir: /home/vitorro/Repositories/sensors2024/outputs/
+------
+[I 2024-03-08 20:37:37,149] A new study created in memory with name: maximize_cluster_score: 20@parts_10.0@level_1@nanom
+Trial: 0
+- N Epochs: 500
+- N Clusters: 10
+- Weight (loss): 0.25
+- Weight (coords): 0.75
+[I 2024-03-08 20:37:53,072] Trial 0 finished with value: {'cscore': 0.101} and parameters: {'N_epochs': 500, 'n_clusters': 10, 'weight_loss': 0.25, 'weight_coords': 0.75}. Best is trial 0 with value: 0.101.
+Trial: 1
+- N Epochs: 250
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.5
+[I 2024-03-08 20:37:57,547] Trial 1 finished with value: {'cscore': 0.623} and parameters: {'N_epochs': 250, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.5}. Best is trial 1 with value: 0.623.
+____ END OF STUDY ___
+
+

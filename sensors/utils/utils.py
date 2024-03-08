@@ -2,8 +2,12 @@ import numpy as np
 import geopandas as gpd
 import plotly.express as px
 
-from sklearn.metrics import mean_squared_error, confusion_matrix, auc
+import torch
 
+from sklearn.metrics import mean_squared_error, confusion_matrix, auc, f1_score
+from sklearn.cluster import KMeans
+
+import sensors.utils.fault_detection as fd
 
 def visualize_map(nodes_input, color='smoothed', size=None, size_max = None, animation_frame=None, hover_data=[None],
                   colormap = px.colors.diverging.oxy, zoom=15, range_color = None, opacity=1,
@@ -308,6 +312,7 @@ def generate_data(G, size, anomaly_type=1):
     signal = signal + anomaly
     
     return signal, label
+
 def hfilter(G, cut=2):
     L = G.L.toarray()
     w, V = np.linalg.eigh(L)
@@ -315,6 +320,68 @@ def hfilter(G, cut=2):
     wh[w<cut] = 0
     Hh = V @ np.diag(wh) @ V.T
     return Hh
+
+def generate_cluster_anomaly(df, nodes, G, data_size=10, partition=20, anomaly_level=10, n_anomalies=1):
+
+    nodes['cluster'] = KMeans(n_clusters=partition, n_init='auto').fit_predict(nodes[['northing','easting']])
+
+    df.drop('cluster', axis=1, inplace=True)
+    df = df.merge(nodes[['pid','cluster']], how='left', on='pid')
+
+    X = []
+    label = []
+    df_anomaly_list = []
+
+    for sample in range(data_size):
+        df_anomaly = df[['timestamp','pid','cluster','smoothed']].copy()
+        df_anomaly['anomaly'] = 0
+
+        anomalous_clusters = np.random.choice(nodes.cluster.unique(), size=n_anomalies)
+
+        for index, cluster in enumerate(anomalous_clusters):
+            index = index+1
+
+            anomaly_sensor = (df_anomaly.cluster==cluster)
+            anomaly_period = (df_anomaly.timestamp>'Jul 2020')&(df_anomaly.timestamp<'Jan 2021')
+            anomaly_loc = anomaly_sensor&anomaly_period
+
+            df_anomaly.loc[anomaly_loc, 'smoothed'] += anomaly_level
+            df_anomaly.loc[anomaly_loc, 'anomaly'] = index
+        
+        X.append(df_anomaly.pivot(index='pid', columns='timestamp', values='smoothed').values)
+        label.append(df_anomaly.pivot(index='pid', columns='timestamp', values='anomaly').values.max(axis=1))
+        df_anomaly_list.append(df_anomaly)
+
+    X = np.array(X)
+    label = np.array(label)
+
+    return X, label, df_anomaly_list
+
+
+
+def get_score(nodes, df_anomaly, S):
+
+    nodes['pred'] = S.argmax(dim=1).cpu().numpy()
+    nodes['score'] = S.softmax(dim=-1).detach().cpu().numpy().max(axis=1)
+    nodes['anomaly'] = df_anomaly[['pid','anomaly']].groupby('pid').anomaly.max().values
+
+    most_common_preds = nodes.query('anomaly!=0').groupby('anomaly')['pred'].apply(lambda x: x.mode()[0])
+
+    nodes['new_pred'] = nodes['pred']
+    nodes.loc[~nodes.pred.isin(most_common_preds.values),'new_pred'] = -1
+
+    max_anomaly = nodes.groupby('new_pred')['anomaly'].transform('max')
+    nodes.loc[nodes['new_pred'] != -1, 'new_pred'] = max_anomaly
+    nodes.loc[nodes['new_pred'] == -1, 'new_pred'] = 0
+
+    average = 'binary' if df_anomaly.anomaly.nunique()==2 else 'weighted'
+    cluster_score = f1_score(y_true=nodes.anomaly, y_pred=nodes.new_pred, average=average)
+
+    tpr, fpr, _ = roc_params(metric=nodes.score, label=(nodes.anomaly>0), interp=True)
+    auc = compute_auc(tpr,fpr)
+
+    return cluster_score, auc#, nodes
+
 
 
 ####################################

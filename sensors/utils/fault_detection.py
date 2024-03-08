@@ -45,7 +45,7 @@ def get_mismatch(df_orig, radius=6, data='smoothed'):
 def treat_nodes(df_orig):
     # Creating dataframe with nodes info only
     columns = ['pid', 'easting','northing']
-    nodes_orig = df_orig.drop_duplicates(['pid'])[columns]
+    nodes_orig = df_orig.drop_duplicates(['pid'])[columns].copy()
     nodes_orig['ID'] = nodes_orig.northing.astype(str) + "N" + nodes_orig.easting.astype(str) + "E"
 
     # Testing for nodes in the same 2D position
