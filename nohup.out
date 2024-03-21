@@ -17,3 +17,1393 @@ Trial: 1
 ____ END OF STUDY ___
 
 
+Using cuda:0
+log dir: /home/vitorro/Repositories/sensors2024/outputs/
+------
+[I 2024-03-08 20:49:47,049] A new study created in memory with name: maximize_cluster_score: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-08 21:30:39,787] Trial 0 finished with value: {'cscore': 0.743} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 0 with value: 0.743.
+Trial: 1
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 0.5
+[I 2024-03-08 21:40:00,808] Trial 1 finished with value: {'cscore': 0.543} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 0.5}. Best is trial 0 with value: 0.743.
+Trial: 2
+- N Epochs: 5000
+- N Clusters: 20
+- Weight (loss): 0.25
+- Weight (coords): 0
+[I 2024-03-08 22:21:01,919] Trial 2 finished with value: {'cscore': 0.314} and parameters: {'N_epochs': 5000, 'n_clusters': 20, 'weight_loss': 0.25, 'weight_coords': 0}. Best is trial 0 with value: 0.743.
+Trial: 3
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.25
+- Weight (coords): 1
+[I 2024-03-08 23:02:09,684] Trial 3 finished with value: {'cscore': 0.9} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.25, 'weight_coords': 1}. Best is trial 3 with value: 0.9.
+Trial: 4
+- N Epochs: 500
+- N Clusters: 5
+- Weight (loss): 0.25
+- Weight (coords): 0.25
+[I 2024-03-08 23:07:25,456] Trial 4 finished with value: {'cscore': 0.516} and parameters: {'N_epochs': 500, 'n_clusters': 5, 'weight_loss': 0.25, 'weight_coords': 0.25}. Best is trial 3 with value: 0.9.
+Trial: 5
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 0.5
+[I 2024-03-08 23:16:34,751] Trial 5 finished with value: {'cscore': 0.538} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 0.5}. Best is trial 3 with value: 0.9.
+Trial: 6
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.25
+- Weight (coords): 0.75
+[I 2024-03-08 23:25:57,543] Trial 6 finished with value: {'cscore': 0.613} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.25, 'weight_coords': 0.75}. Best is trial 3 with value: 0.9.
+Trial: 7
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 0.5
+- Weight (coords): 0.75
+[I 2024-03-08 23:35:16,673] Trial 7 finished with value: {'cscore': 0.938} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 0.5, 'weight_coords': 0.75}. Best is trial 7 with value: 0.938.
+Trial: 8
+- N Epochs: 1000
+- N Clusters: 20
+- Weight (loss): 0
+- Weight (coords): 0
+[I 2024-03-08 23:44:32,065] Trial 8 finished with value: {'cscore': 0.271} and parameters: {'N_epochs': 1000, 'n_clusters': 20, 'weight_loss': 0, 'weight_coords': 0}. Best is trial 7 with value: 0.938.
+Trial: 9
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.75
+[I 2024-03-08 23:54:08,579] Trial 9 finished with value: {'cscore': 0.965} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.75}. Best is trial 9 with value: 0.965.
+Trial: 10
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.75
+[I 2024-03-09 00:03:42,671] Trial 10 finished with value: {'cscore': 0.961} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.75}. Best is trial 9 with value: 0.965.
+Trial: 11
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.75
+[I 2024-03-09 00:12:54,130] Trial 11 finished with value: {'cscore': 0.983} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.75}. Best is trial 11 with value: 0.983.
+Trial: 12
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.75
+[I 2024-03-09 00:22:21,538] Trial 12 finished with value: {'cscore': 0.963} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.75}. Best is trial 11 with value: 0.983.
+Trial: 13
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.75
+[I 2024-03-09 00:31:43,003] Trial 13 finished with value: {'cscore': 0.976} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.75}. Best is trial 11 with value: 0.983.
+Trial: 14
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 1
+[I 2024-03-09 00:41:01,434] Trial 14 finished with value: {'cscore': 0.994} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 1}. Best is trial 14 with value: 0.994.
+Trial: 15
+- N Epochs: 500
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 1
+[I 2024-03-09 00:46:36,541] Trial 15 finished with value: {'cscore': 0.927} and parameters: {'N_epochs': 500, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 1}. Best is trial 14 with value: 0.994.
+Trial: 16
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-09 00:56:19,714] Trial 16 finished with value: {'cscore': 0.946} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 14 with value: 0.994.
+Trial: 17
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0
+- Weight (coords): 1
+[I 2024-03-09 01:06:00,178] Trial 17 finished with value: {'cscore': 0.237} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0, 'weight_coords': 1}. Best is trial 14 with value: 0.994.
+Trial: 18
+- N Epochs: 1000
+- N Clusters: 20
+- Weight (loss): 0.75
+- Weight (coords): 1
+[I 2024-03-09 01:15:50,930] Trial 18 finished with value: {'cscore': 0.965} and parameters: {'N_epochs': 1000, 'n_clusters': 20, 'weight_loss': 0.75, 'weight_coords': 1}. Best is trial 14 with value: 0.994.
+Trial: 19
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-09 01:25:34,983] Trial 19 finished with value: {'cscore': 0.979} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 14 with value: 0.994.
+Trial: 20
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0
+[I 2024-03-09 01:35:18,751] Trial 20 finished with value: {'cscore': 0.96} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0}. Best is trial 14 with value: 0.994.
+Trial: 21
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-09 01:45:04,033] Trial 21 finished with value: {'cscore': 0.985} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 14 with value: 0.994.
+Trial: 22
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-09 01:54:40,812] Trial 22 finished with value: {'cscore': 0.979} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 14 with value: 0.994.
+Trial: 23
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-09 02:04:23,592] Trial 23 finished with value: {'cscore': 0.969} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 14 with value: 0.994.
+Trial: 24
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0
+- Weight (coords): 0.25
+[I 2024-03-09 02:14:21,078] Trial 24 finished with value: {'cscore': 0.237} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0, 'weight_coords': 0.25}. Best is trial 14 with value: 0.994.
+Trial: 25
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-09 02:24:12,021] Trial 25 finished with value: {'cscore': 0.945} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 14 with value: 0.994.
+Trial: 26
+- N Epochs: 1000
+- N Clusters: 20
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-09 02:34:01,509] Trial 26 finished with value: {'cscore': 0.966} and parameters: {'N_epochs': 1000, 'n_clusters': 20, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 14 with value: 0.994.
+Trial: 27
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-09 02:43:47,297] Trial 27 finished with value: {'cscore': 0.988} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 14 with value: 0.994.
+Trial: 28
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-09 02:53:36,303] Trial 28 finished with value: {'cscore': 0.973} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 14 with value: 0.994.
+Trial: 29
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.5
+[I 2024-03-09 03:03:26,356] Trial 29 finished with value: {'cscore': 0.994} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.5}. Best is trial 14 with value: 0.994.
+Trial: 30
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 03:13:09,086] Trial 30 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 31
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 03:23:02,628] Trial 31 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 32
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 03:32:45,168] Trial 32 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 33
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 03:42:28,162] Trial 33 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 34
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 03:52:16,401] Trial 34 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 35
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 04:02:01,533] Trial 35 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 36
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 04:11:47,946] Trial 36 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 37
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 04:21:38,155] Trial 37 finished with value: {'cscore': 0.997} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 38
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 04:31:15,658] Trial 38 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 39
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 04:41:08,152] Trial 39 finished with value: {'cscore': 0.899} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 40
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 04:50:56,103] Trial 40 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 41
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 05:00:40,567] Trial 41 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 42
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 05:10:21,729] Trial 42 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 43
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 05:19:55,197] Trial 43 finished with value: {'cscore': 0.995} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 44
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 05:29:40,016] Trial 44 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 45
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.25
+- Weight (coords): 0.25
+[I 2024-03-09 06:12:06,304] Trial 45 finished with value: {'cscore': 0.885} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.25, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 46
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 06:21:52,430] Trial 46 finished with value: {'cscore': 0.885} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 47
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0
+[I 2024-03-09 06:31:43,656] Trial 47 finished with value: {'cscore': 0.992} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0}. Best is trial 30 with value: 0.998.
+Trial: 48
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-09 06:41:29,244] Trial 48 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+Trial: 49
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 0.25
+- Weight (coords): 0.25
+[I 2024-03-09 06:51:13,783] Trial 49 finished with value: {'cscore': 0.59} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 0.25, 'weight_coords': 0.25}. Best is trial 30 with value: 0.998.
+____ END OF STUDY ___
+
+
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/
+------
+[I 2024-03-09 09:30:01,707] A new study created in memory with name: maximize_cluster_score: 20parts_10level_1anomaly
+[W 2024-03-09 09:30:01,856] Trial 50 failed with parameters: {} because of the following error: ValueError('CategoricalDistribution does not support dynamic value space.').
+Traceback (most recent call last):
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_cluster.py", line 135, in objective
+    N_epochs = trial.suggest_categorical('N_epochs', args.N_epochs)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/trial/_trial.py", line 410, in suggest_categorical
+    return self._suggest(name, CategoricalDistribution(choices=choices))
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/trial/_trial.py", line 641, in _suggest
+    storage.set_trial_param(trial_id, name, param_value_in_internal_repr, distribution)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/storages/_in_memory.py", line 187, in set_trial_param
+    distributions.check_distribution_compatibility(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/distributions.py", line 670, in check_distribution_compatibility
+    raise ValueError(
+ValueError: CategoricalDistribution does not support dynamic value space.
+[W 2024-03-09 09:30:01,857] Trial 50 failed with value None.
+Traceback (most recent call last):
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_cluster.py", line 213, in <module>
+    main(args)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_cluster.py", line 184, in main
+    study.optimize(objective, n_trials=args.n_trials, gc_after_trial=True)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_cluster.py", line 135, in objective
+    N_epochs = trial.suggest_categorical('N_epochs', args.N_epochs)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/trial/_trial.py", line 410, in suggest_categorical
+    return self._suggest(name, CategoricalDistribution(choices=choices))
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/trial/_trial.py", line 641, in _suggest
+    storage.set_trial_param(trial_id, name, param_value_in_internal_repr, distribution)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/storages/_in_memory.py", line 187, in set_trial_param
+    distributions.check_distribution_compatibility(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/distributions.py", line 670, in check_distribution_compatibility
+    raise ValueError(
+ValueError: CategoricalDistribution does not support dynamic value space.
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/
+------
+[W 2024-03-09 09:31:16,460] Trial 50 failed with parameters: {} because of the following error: ValueError('CategoricalDistribution does not support dynamic value space.').
+Traceback (most recent call last):
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_cluster.py", line 135, in objective
+    N_epochs = trial.suggest_categorical('N_epochs', args.N_epochs)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/trial/_trial.py", line 410, in suggest_categorical
+    return self._suggest(name, CategoricalDistribution(choices=choices))
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/trial/_trial.py", line 641, in _suggest
+    storage.set_trial_param(trial_id, name, param_value_in_internal_repr, distribution)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/storages/_in_memory.py", line 187, in set_trial_param
+    distributions.check_distribution_compatibility(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/distributions.py", line 670, in check_distribution_compatibility
+    raise ValueError(
+ValueError: CategoricalDistribution does not support dynamic value space.
+[W 2024-03-09 09:31:16,461] Trial 50 failed with value None.
+Traceback (most recent call last):
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_cluster.py", line 213, in <module>
+    main(args)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_cluster.py", line 184, in main
+    study.optimize(objective, n_trials=args.n_trials, gc_after_trial=True)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_cluster.py", line 135, in objective
+    N_epochs = trial.suggest_categorical('N_epochs', args.N_epochs)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/trial/_trial.py", line 410, in suggest_categorical
+    return self._suggest(name, CategoricalDistribution(choices=choices))
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/trial/_trial.py", line 641, in _suggest
+    storage.set_trial_param(trial_id, name, param_value_in_internal_repr, distribution)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/storages/_in_memory.py", line 187, in set_trial_param
+    distributions.check_distribution_compatibility(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/distributions.py", line 670, in check_distribution_compatibility
+    raise ValueError(
+ValueError: CategoricalDistribution does not support dynamic value space.
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/
+------
+[I 2024-03-09 09:40:50,084] A new study created in memory with name: maximize_cluster_score: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 10000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 0.75
+[I 2024-03-09 10:55:45,187] Trial 0 finished with value: {'cscore': 0.952} and parameters: {'N_epochs': 10000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 0.75}. Best is trial 0 with value: 0.952.
+Trial: 1
+- N Epochs: 500
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.25
+[I 2024-03-09 11:00:44,118] Trial 1 finished with value: {'cscore': 0.883} and parameters: {'N_epochs': 500, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.25}. Best is trial 0 with value: 0.952.
+Trial: 2
+- N Epochs: 5000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 1
+[I 2024-03-09 11:37:50,237] Trial 2 finished with value: {'cscore': 0.413} and parameters: {'N_epochs': 5000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 1}. Best is trial 0 with value: 0.952.
+Trial: 3
+- N Epochs: 500
+- N Clusters: 20
+- Weight (loss): 0.5
+- Weight (coords): 0.25
+[I 2024-03-09 11:42:53,318] Trial 3 finished with value: {'cscore': 0.6} and parameters: {'N_epochs': 500, 'n_clusters': 20, 'weight_loss': 0.5, 'weight_coords': 0.25}. Best is trial 0 with value: 0.952.
+Trial: 4
+- N Epochs: 500
+- N Clusters: 10
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-09 11:47:47,733] Trial 4 finished with value: {'cscore': 0.861} and parameters: {'N_epochs': 500, 'n_clusters': 10, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 0 with value: 0.952.
+Trial: 5
+- N Epochs: 10000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 0.75
+[I 2024-03-09 13:00:27,479] Trial 5 finished with value: {'cscore': 0.408} and parameters: {'N_epochs': 10000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 0.75}. Best is trial 0 with value: 0.952.
+Trial: 6
+- N Epochs: 10000
+- N Clusters: 10
+- Weight (loss): 0.25
+- Weight (coords): 0.5
+[I 2024-03-09 14:14:17,408] Trial 6 finished with value: {'cscore': 0.913} and parameters: {'N_epochs': 10000, 'n_clusters': 10, 'weight_loss': 0.25, 'weight_coords': 0.5}. Best is trial 0 with value: 0.952.
+Trial: 7
+- N Epochs: 10000
+- N Clusters: 10
+- Weight (loss): 0.5
+- Weight (coords): 0.75
+[I 2024-03-09 15:29:39,683] Trial 7 finished with value: {'cscore': 0.91} and parameters: {'N_epochs': 10000, 'n_clusters': 10, 'weight_loss': 0.5, 'weight_coords': 0.75}. Best is trial 0 with value: 0.952.
+Trial: 8
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-09 16:07:00,400] Trial 8 finished with value: {'cscore': 0.973} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 8 with value: 0.973.
+Trial: 9
+- N Epochs: 500
+- N Clusters: 20
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-09 16:12:13,758] Trial 9 finished with value: {'cscore': 0.823} and parameters: {'N_epochs': 500, 'n_clusters': 20, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 8 with value: 0.973.
+Trial: 10
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-09 16:50:29,516] Trial 10 finished with value: {'cscore': 0.862} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 8 with value: 0.973.
+Trial: 11
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 0.75
+[I 2024-03-09 17:28:15,285] Trial 11 finished with value: {'cscore': 0.945} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 0.75}. Best is trial 8 with value: 0.973.
+Trial: 12
+- N Epochs: 10000
+- N Clusters: 15
+- Weight (loss): 0.25
+- Weight (coords): 0.5
+[I 2024-03-09 18:41:58,131] Trial 12 finished with value: {'cscore': 0.876} and parameters: {'N_epochs': 10000, 'n_clusters': 15, 'weight_loss': 0.25, 'weight_coords': 0.5}. Best is trial 8 with value: 0.973.
+Trial: 13
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 0.75
+[I 2024-03-09 19:19:31,426] Trial 13 finished with value: {'cscore': 0.959} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 0.75}. Best is trial 8 with value: 0.973.
+Trial: 14
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-09 19:57:03,047] Trial 14 finished with value: {'cscore': 0.976} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 14 with value: 0.976.
+Trial: 15
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-09 20:34:34,355] Trial 15 finished with value: {'cscore': 0.986} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 15 with value: 0.986.
+Trial: 16
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.25
+- Weight (coords): 0.5
+[I 2024-03-09 21:12:01,577] Trial 16 finished with value: {'cscore': 0.903} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.25, 'weight_coords': 0.5}. Best is trial 15 with value: 0.986.
+Trial: 17
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-09 21:50:13,578] Trial 17 finished with value: {'cscore': 0.859} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 15 with value: 0.986.
+Trial: 18
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 1
+- Weight (coords): 0.5
+[I 2024-03-09 22:28:33,368] Trial 18 finished with value: {'cscore': 0.73} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 1, 'weight_coords': 0.5}. Best is trial 15 with value: 0.986.
+Trial: 19
+- N Epochs: 5000
+- N Clusters: 20
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-09 23:06:46,053] Trial 19 finished with value: {'cscore': 0.94} and parameters: {'N_epochs': 5000, 'n_clusters': 20, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 15 with value: 0.986.
+____ END OF STUDY ___
+
+
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/
+------
+[I 2024-03-10 11:34:28,274] A new study created in memory with name: maximize_cluster_score: 20parts_5.0level_1anomaly
+Trial: 0
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.5
+- Weight (coords): 0.25
+[I 2024-03-10 12:11:59,156] Trial 0 finished with value: {'cscore': 0.991} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.5, 'weight_coords': 0.25}. Best is trial 0 with value: 0.991.
+Trial: 1
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 0.5
+[I 2024-03-10 12:20:29,172] Trial 1 finished with value: {'cscore': 0.521} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 0.5}. Best is trial 0 with value: 0.991.
+Trial: 2
+- N Epochs: 1000
+- N Clusters: 20
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-10 12:29:06,067] Trial 2 finished with value: {'cscore': 0.726} and parameters: {'N_epochs': 1000, 'n_clusters': 20, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 0 with value: 0.991.
+Trial: 3
+- N Epochs: 500
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 1
+[I 2024-03-10 12:34:11,886] Trial 3 finished with value: {'cscore': 0.643} and parameters: {'N_epochs': 500, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 1}. Best is trial 0 with value: 0.991.
+Trial: 4
+- N Epochs: 5000
+- N Clusters: 20
+- Weight (loss): 1
+- Weight (coords): 0.75
+[I 2024-03-10 13:12:10,067] Trial 4 finished with value: {'cscore': 0.897} and parameters: {'N_epochs': 5000, 'n_clusters': 20, 'weight_loss': 1, 'weight_coords': 0.75}. Best is trial 0 with value: 0.991.
+Trial: 5
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 0.25
+- Weight (coords): 0.75
+[I 2024-03-10 13:20:53,660] Trial 5 finished with value: {'cscore': 0.489} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 0.25, 'weight_coords': 0.75}. Best is trial 0 with value: 0.991.
+Trial: 6
+- N Epochs: 500
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-10 13:26:02,452] Trial 6 finished with value: {'cscore': 0.352} and parameters: {'N_epochs': 500, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 0 with value: 0.991.
+____ END OF STUDY ___
+
+
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/
+------
+[I 2024-03-12 09:36:55,740] A new study created in memory with name: maximize_cluster_score: 20parts_5.0level_1anomaly
+Trial: 0
+- N Epochs: 500
+- N Clusters: 20
+- Weight (loss): 0.75
+- Weight (coords): 0.75
+[I 2024-03-12 09:41:59,929] Trial 0 finished with value: {'cscore': 0.46} and parameters: {'N_epochs': 500, 'n_clusters': 20, 'weight_loss': 0.75, 'weight_coords': 0.75}. Best is trial 0 with value: 0.46.
+Trial: 1
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-12 09:50:04,106] Trial 1 finished with value: {'cscore': 0.882} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 1 with value: 0.882.
+Trial: 2
+- N Epochs: 10000
+- N Clusters: 15
+- Weight (loss): 0.25
+- Weight (coords): 1
+[I 2024-03-12 10:52:24,017] Trial 2 finished with value: {'cscore': 0.788} and parameters: {'N_epochs': 10000, 'n_clusters': 15, 'weight_loss': 0.25, 'weight_coords': 1}. Best is trial 1 with value: 0.882.
+Trial: 3
+- N Epochs: 500
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-12 10:56:40,842] Trial 3 finished with value: {'cscore': 0.593} and parameters: {'N_epochs': 500, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 1 with value: 0.882.
+Trial: 4
+- N Epochs: 10000
+- N Clusters: 10
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-12 11:53:35,226] Trial 4 finished with value: {'cscore': 0.945} and parameters: {'N_epochs': 10000, 'n_clusters': 10, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 4 with value: 0.945.
+Trial: 5
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 0.75
+[I 2024-03-12 12:22:47,044] Trial 5 finished with value: {'cscore': 0.924} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 0.75}. Best is trial 4 with value: 0.945.
+Trial: 6
+- N Epochs: 500
+- N Clusters: 20
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-12 12:27:19,539] Trial 6 finished with value: {'cscore': 0.383} and parameters: {'N_epochs': 500, 'n_clusters': 20, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 4 with value: 0.945.
+Trial: 7
+- N Epochs: 5000
+- N Clusters: 20
+- Weight (loss): 0.25
+- Weight (coords): 0.5
+[I 2024-03-12 12:57:13,043] Trial 7 finished with value: {'cscore': 0.742} and parameters: {'N_epochs': 5000, 'n_clusters': 20, 'weight_loss': 0.25, 'weight_coords': 0.5}. Best is trial 4 with value: 0.945.
+Trial: 8
+- N Epochs: 10000
+- N Clusters: 5
+- Weight (loss): 0.25
+- Weight (coords): 1
+[I 2024-03-12 13:53:34,050] Trial 8 finished with value: {'cscore': 0.384} and parameters: {'N_epochs': 10000, 'n_clusters': 5, 'weight_loss': 0.25, 'weight_coords': 1}. Best is trial 4 with value: 0.945.
+Trial: 9
+- N Epochs: 10000
+- N Clusters: 15
+- Weight (loss): 0.25
+- Weight (coords): 0.25
+[I 2024-03-12 14:50:37,480] Trial 9 finished with value: {'cscore': 0.856} and parameters: {'N_epochs': 10000, 'n_clusters': 15, 'weight_loss': 0.25, 'weight_coords': 0.25}. Best is trial 4 with value: 0.945.
+Trial: 10
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-12 14:57:44,882] Trial 10 finished with value: {'cscore': 0.727} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 4 with value: 0.945.
+Trial: 11
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 0.75
+[I 2024-03-12 15:27:09,760] Trial 11 finished with value: {'cscore': 0.955} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 0.75}. Best is trial 11 with value: 0.955.
+Trial: 12
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.5
+- Weight (coords): 0.75
+[I 2024-03-12 15:56:12,970] Trial 12 finished with value: {'cscore': 0.944} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.5, 'weight_coords': 0.75}. Best is trial 11 with value: 0.955.
+Trial: 13
+- N Epochs: 10000
+- N Clusters: 10
+- Weight (loss): 0.5
+- Weight (coords): 0.75
+[I 2024-03-12 16:53:18,191] Trial 13 finished with value: {'cscore': 0.89} and parameters: {'N_epochs': 10000, 'n_clusters': 10, 'weight_loss': 0.5, 'weight_coords': 0.75}. Best is trial 11 with value: 0.955.
+Trial: 14
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-12 17:22:23,844] Trial 14 finished with value: {'cscore': 0.952} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 11 with value: 0.955.
+Trial: 15
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.75
+[I 2024-03-12 17:51:34,444] Trial 15 finished with value: {'cscore': 0.886} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.75}. Best is trial 11 with value: 0.955.
+Trial: 16
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 0.25
+[I 2024-03-12 18:20:35,519] Trial 16 finished with value: {'cscore': 0.967} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 0.25}. Best is trial 16 with value: 0.967.
+Trial: 17
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 0.25
+[I 2024-03-12 18:49:29,941] Trial 17 finished with value: {'cscore': 0.95} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 0.25}. Best is trial 16 with value: 0.967.
+Trial: 18
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 0.25
+[I 2024-03-12 19:18:56,827] Trial 18 finished with value: {'cscore': 0.971} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 0.25}. Best is trial 18 with value: 0.971.
+Trial: 19
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-12 19:47:49,399] Trial 19 finished with value: {'cscore': 0.977} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 19 with value: 0.977.
+Trial: 20
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-12 19:54:50,708] Trial 20 finished with value: {'cscore': 0.912} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 19 with value: 0.977.
+Trial: 21
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-12 20:24:10,750] Trial 21 finished with value: {'cscore': 0.982} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 21 with value: 0.982.
+Trial: 22
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-12 20:53:31,179] Trial 22 finished with value: {'cscore': 0.985} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 23
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-12 21:22:41,678] Trial 23 finished with value: {'cscore': 0.965} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 24
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-12 21:51:51,642] Trial 24 finished with value: {'cscore': 0.974} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 25
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-12 22:20:32,634] Trial 25 finished with value: {'cscore': 0.971} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 26
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-12 22:49:36,070] Trial 26 finished with value: {'cscore': 0.978} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 27
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-12 23:18:17,420] Trial 27 finished with value: {'cscore': 0.969} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 28
+- N Epochs: 500
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 1
+[I 2024-03-12 23:22:31,821] Trial 28 finished with value: {'cscore': 0.613} and parameters: {'N_epochs': 500, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 1}. Best is trial 22 with value: 0.985.
+Trial: 29
+- N Epochs: 1000
+- N Clusters: 20
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-12 23:29:34,183] Trial 29 finished with value: {'cscore': 0.863} and parameters: {'N_epochs': 1000, 'n_clusters': 20, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 30
+- N Epochs: 5000
+- N Clusters: 20
+- Weight (loss): 0.75
+- Weight (coords): 0.25
+[I 2024-03-12 23:58:56,238] Trial 30 finished with value: {'cscore': 0.967} and parameters: {'N_epochs': 5000, 'n_clusters': 20, 'weight_loss': 0.75, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 31
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-13 00:27:41,911] Trial 31 finished with value: {'cscore': 0.96} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 32
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-13 00:56:55,837] Trial 32 finished with value: {'cscore': 0.984} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 33
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-13 01:25:20,613] Trial 33 finished with value: {'cscore': 0.98} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 34
+- N Epochs: 500
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-13 01:29:30,214] Trial 34 finished with value: {'cscore': 0.537} and parameters: {'N_epochs': 500, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 35
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 1
+[I 2024-03-13 01:58:14,862] Trial 35 finished with value: {'cscore': 0.893} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 1}. Best is trial 22 with value: 0.985.
+Trial: 36
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-13 02:05:11,747] Trial 36 finished with value: {'cscore': 0.898} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 37
+- N Epochs: 500
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.25
+[I 2024-03-13 02:09:23,934] Trial 37 finished with value: {'cscore': 0.383} and parameters: {'N_epochs': 500, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 38
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-13 02:37:56,829] Trial 38 finished with value: {'cscore': 0.976} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 39
+- N Epochs: 5000
+- N Clusters: 20
+- Weight (loss): 1
+- Weight (coords): 1
+[I 2024-03-13 03:07:02,943] Trial 39 finished with value: {'cscore': 0.88} and parameters: {'N_epochs': 5000, 'n_clusters': 20, 'weight_loss': 1, 'weight_coords': 1}. Best is trial 22 with value: 0.985.
+Trial: 40
+- N Epochs: 10000
+- N Clusters: 15
+- Weight (loss): 0.25
+- Weight (coords): 0.25
+[I 2024-03-13 04:03:13,706] Trial 40 finished with value: {'cscore': 0.841} and parameters: {'N_epochs': 10000, 'n_clusters': 15, 'weight_loss': 0.25, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 41
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-13 04:32:23,303] Trial 41 finished with value: {'cscore': 0.964} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 42
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-13 05:00:53,195] Trial 42 finished with value: {'cscore': 0.97} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 43
+- N Epochs: 5000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.25
+[I 2024-03-13 05:29:58,989] Trial 43 finished with value: {'cscore': 0.979} and parameters: {'N_epochs': 5000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 44
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.25
+[I 2024-03-13 05:59:01,444] Trial 44 finished with value: {'cscore': 0.984} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 45
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-13 06:27:22,685] Trial 45 finished with value: {'cscore': 0.86} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 22 with value: 0.985.
+Trial: 46
+- N Epochs: 10000
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.25
+[I 2024-03-13 07:22:33,341] Trial 46 finished with value: {'cscore': 0.828} and parameters: {'N_epochs': 10000, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.25}. Best is trial 22 with value: 0.985.
+Trial: 47
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.75
+[I 2024-03-13 07:51:21,197] Trial 47 finished with value: {'cscore': 0.831} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.75}. Best is trial 22 with value: 0.985.
+Trial: 48
+- N Epochs: 500
+- N Clusters: 10
+- Weight (loss): 0.25
+- Weight (coords): 1
+[I 2024-03-13 07:55:33,029] Trial 48 finished with value: {'cscore': 0.278} and parameters: {'N_epochs': 500, 'n_clusters': 10, 'weight_loss': 0.25, 'weight_coords': 1}. Best is trial 22 with value: 0.985.
+Trial: 49
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-13 08:02:21,984] Trial 49 finished with value: {'cscore': 0.9} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 22 with value: 0.985.
+____ END OF STUDY ___
+
+
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/
+------
+[I 2024-03-13 14:51:15,284] A new study created in memory with name: maximize_cluster_score: 20parts_10.0level_1anomaly
+Trial: 0
+- N Epochs: 500
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 0.25
+[I 2024-03-13 14:56:04,331] Trial 0 finished with value: {'cscore': 0.925} and parameters: {'N_epochs': 500, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 0.25}. Best is trial 0 with value: 0.925.
+Trial: 1
+- N Epochs: 10000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 0.75
+[I 2024-03-13 16:07:14,539] Trial 1 finished with value: {'cscore': 0.984} and parameters: {'N_epochs': 10000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 0.75}. Best is trial 1 with value: 0.984.
+Trial: 2
+- N Epochs: 5000
+- N Clusters: 5
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-13 16:44:25,720] Trial 2 finished with value: {'cscore': 0.995} and parameters: {'N_epochs': 5000, 'n_clusters': 5, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 2 with value: 0.995.
+Trial: 3
+- N Epochs: 500
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-13 16:49:33,928] Trial 3 finished with value: {'cscore': 0.925} and parameters: {'N_epochs': 500, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 2 with value: 0.995.
+Trial: 4
+- N Epochs: 10000
+- N Clusters: 20
+- Weight (loss): 0.25
+- Weight (coords): 0.25
+[I 2024-03-13 18:02:28,302] Trial 4 finished with value: {'cscore': 0.251} and parameters: {'N_epochs': 10000, 'n_clusters': 20, 'weight_loss': 0.25, 'weight_coords': 0.25}. Best is trial 2 with value: 0.995.
+Trial: 5
+- N Epochs: 10000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 0.25
+[I 2024-03-13 19:05:54,415] Trial 5 finished with value: {'cscore': 0.823} and parameters: {'N_epochs': 10000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 0.25}. Best is trial 2 with value: 0.995.
+Trial: 6
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.25
+- Weight (coords): 0.75
+[I 2024-03-13 19:33:10,672] Trial 6 finished with value: {'cscore': 0.565} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.25, 'weight_coords': 0.75}. Best is trial 2 with value: 0.995.
+Trial: 7
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-13 19:40:19,394] Trial 7 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 7 with value: 0.998.
+Trial: 8
+- N Epochs: 500
+- N Clusters: 20
+- Weight (loss): 0.75
+- Weight (coords): 0.75
+[I 2024-03-13 19:44:46,933] Trial 8 finished with value: {'cscore': 0.825} and parameters: {'N_epochs': 500, 'n_clusters': 20, 'weight_loss': 0.75, 'weight_coords': 0.75}. Best is trial 7 with value: 0.998.
+Trial: 9
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.25
+- Weight (coords): 0.25
+[I 2024-03-13 19:51:59,009] Trial 9 finished with value: {'cscore': 0.774} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.25, 'weight_coords': 0.25}. Best is trial 7 with value: 0.998.
+Trial: 10
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 0.5
+[I 2024-03-13 19:58:47,108] Trial 10 finished with value: {'cscore': 0.977} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 0.5}. Best is trial 7 with value: 0.998.
+Trial: 11
+- N Epochs: 5000
+- N Clusters: 5
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-13 20:28:57,834] Trial 11 finished with value: {'cscore': 0.996} and parameters: {'N_epochs': 5000, 'n_clusters': 5, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 7 with value: 0.998.
+Trial: 12
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-13 20:59:24,817] Trial 12 finished with value: {'cscore': 0.985} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 7 with value: 0.998.
+Trial: 13
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-13 21:07:11,608] Trial 13 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 14
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-13 21:15:14,125] Trial 14 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 15
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-13 21:23:27,384] Trial 15 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 16
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-13 21:31:29,329] Trial 16 finished with value: {'cscore': 0.951} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 17
+- N Epochs: 1000
+- N Clusters: 20
+- Weight (loss): 1
+- Weight (coords): 0.5
+[I 2024-03-13 21:39:46,196] Trial 17 finished with value: {'cscore': 0.977} and parameters: {'N_epochs': 1000, 'n_clusters': 20, 'weight_loss': 1, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 18
+- N Epochs: 1000
+- N Clusters: 10
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-13 21:47:55,596] Trial 18 finished with value: {'cscore': 0.994} and parameters: {'N_epochs': 1000, 'n_clusters': 10, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 19
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-13 21:56:03,830] Trial 19 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 20
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-13 22:04:26,348] Trial 20 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 21
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-13 22:12:52,412] Trial 21 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 22
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-13 22:21:00,776] Trial 22 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 23
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-13 22:28:20,400] Trial 23 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 24
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-13 22:35:29,094] Trial 24 finished with value: {'cscore': 0.99} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 25
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-13 22:43:51,410] Trial 25 finished with value: {'cscore': 0.981} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 26
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 1
+- Weight (coords): 1
+[I 2024-03-13 22:52:13,979] Trial 26 finished with value: {'cscore': 0.992} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 1, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 27
+- N Epochs: 500
+- N Clusters: 10
+- Weight (loss): 0.25
+- Weight (coords): 0.75
+[I 2024-03-13 22:57:10,471] Trial 27 finished with value: {'cscore': 0.425} and parameters: {'N_epochs': 500, 'n_clusters': 10, 'weight_loss': 0.25, 'weight_coords': 0.75}. Best is trial 13 with value: 0.999.
+Trial: 28
+- N Epochs: 10000
+- N Clusters: 20
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-14 00:06:28,181] Trial 28 finished with value: {'cscore': 0.822} and parameters: {'N_epochs': 10000, 'n_clusters': 20, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 29
+- N Epochs: 500
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 0.25
+[I 2024-03-14 00:11:20,527] Trial 29 finished with value: {'cscore': 0.928} and parameters: {'N_epochs': 500, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 0.25}. Best is trial 13 with value: 0.999.
+Trial: 30
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.75
+- Weight (coords): 1
+[I 2024-03-14 00:19:46,623] Trial 30 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.75, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 31
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-14 00:28:02,411] Trial 31 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 32
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-14 00:36:14,813] Trial 32 finished with value: {'cscore': 0.99} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 33
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-14 00:44:33,717] Trial 33 finished with value: {'cscore': 0.99} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 34
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-14 00:52:45,019] Trial 34 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 35
+- N Epochs: 10000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 0.75
+[I 2024-03-14 01:59:57,518] Trial 35 finished with value: {'cscore': 0.997} and parameters: {'N_epochs': 10000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 0.75}. Best is trial 13 with value: 0.999.
+Trial: 36
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 1
+- Weight (coords): 0.5
+[I 2024-03-14 02:08:04,062] Trial 36 finished with value: {'cscore': 0.995} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 1, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 37
+- N Epochs: 5000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-14 02:44:04,546] Trial 37 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 5000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 38
+- N Epochs: 10000
+- N Clusters: 20
+- Weight (loss): 0.25
+- Weight (coords): 0.25
+[I 2024-03-14 03:54:00,593] Trial 38 finished with value: {'cscore': 0.233} and parameters: {'N_epochs': 10000, 'n_clusters': 20, 'weight_loss': 0.25, 'weight_coords': 0.25}. Best is trial 13 with value: 0.999.
+Trial: 39
+- N Epochs: 500
+- N Clusters: 5
+- Weight (loss): 0.75
+- Weight (coords): 0.5
+[I 2024-03-14 03:58:56,565] Trial 39 finished with value: {'cscore': 0.992} and parameters: {'N_epochs': 500, 'n_clusters': 5, 'weight_loss': 0.75, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 40
+- N Epochs: 1000
+- N Clusters: 15
+- Weight (loss): 0.5
+- Weight (coords): 0.75
+[I 2024-03-14 04:07:11,841] Trial 40 finished with value: {'cscore': 0.818} and parameters: {'N_epochs': 1000, 'n_clusters': 15, 'weight_loss': 0.5, 'weight_coords': 0.75}. Best is trial 13 with value: 0.999.
+Trial: 41
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-14 04:15:39,419] Trial 41 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 42
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-14 04:23:50,007] Trial 42 finished with value: {'cscore': 0.981} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 43
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-14 04:32:08,099] Trial 43 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 44
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+[I 2024-03-14 04:40:08,800] Trial 44 finished with value: {'cscore': 0.99} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 45
+- N Epochs: 5000
+- N Clusters: 10
+- Weight (loss): 0.25
+- Weight (coords): 0.25
+[I 2024-03-14 05:14:40,887] Trial 45 finished with value: {'cscore': 0.574} and parameters: {'N_epochs': 5000, 'n_clusters': 10, 'weight_loss': 0.25, 'weight_coords': 0.25}. Best is trial 13 with value: 0.999.
+Trial: 46
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.75
+- Weight (coords): 1
+[I 2024-03-14 05:22:46,529] Trial 46 finished with value: {'cscore': 0.998} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.75, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+Trial: 47
+- N Epochs: 1000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 0.5
+[I 2024-03-14 05:30:42,190] Trial 47 finished with value: {'cscore': 0.999} and parameters: {'N_epochs': 1000, 'n_clusters': 5, 'weight_loss': 0.5, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 48
+- N Epochs: 10000
+- N Clusters: 20
+- Weight (loss): 1
+- Weight (coords): 0.5
+[I 2024-03-14 06:36:53,742] Trial 48 finished with value: {'cscore': 0.991} and parameters: {'N_epochs': 10000, 'n_clusters': 20, 'weight_loss': 1, 'weight_coords': 0.5}. Best is trial 13 with value: 0.999.
+Trial: 49
+- N Epochs: 500
+- N Clusters: 15
+- Weight (loss): 0.75
+- Weight (coords): 1
+[I 2024-03-14 06:41:35,247] Trial 49 finished with value: {'cscore': 0.856} and parameters: {'N_epochs': 500, 'n_clusters': 15, 'weight_loss': 0.75, 'weight_coords': 1}. Best is trial 13 with value: 0.999.
+____ END OF STUDY ___
+
+
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/
+------
+[I 2024-03-21 11:04:27,564] A new study created in memory with name: maximize_cluster_score: 20parts_10.0level_1anomaly
+Trial: 0
+- N Epochs: 10000
+- N Clusters: 5
+- Weight (loss): 0.5
+- Weight (coords): 1
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/autoencoder_optuna/
+------
+[I 2024-03-21 13:14:29,719] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+[W 2024-03-21 13:14:29,825] Trial 0 failed with parameters: {'N_epochs': 1000, 'n_clusters': 20} because of the following error: AttributeError("'Namespace' object has no attribute 'n_layers'").
+Traceback (most recent call last):
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 133, in objective
+    n_layers = trial.suggest_categorical('n_layers', args.n_layers)
+AttributeError: 'Namespace' object has no attribute 'n_layers'
+[W 2024-03-21 13:14:29,837] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 213, in <module>
+    main(args)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 183, in main
+    study.optimize(objective, n_trials=args.n_trials, gc_after_trial=True)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 133, in objective
+    n_layers = trial.suggest_categorical('n_layers', args.n_layers)
+AttributeError: 'Namespace' object has no attribute 'n_layers'
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/autoencoder_optuna/
+------
+[I 2024-03-21 13:17:01,927] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+[W 2024-03-21 13:17:02,033] Trial 0 failed with parameters: {'N_epochs': 1000} because of the following error: AttributeError("'Namespace' object has no attribute 'n_clusters'").
+Traceback (most recent call last):
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 132, in objective
+    n_clusters = trial.suggest_categorical('n_clusters', args.n_clusters)
+AttributeError: 'Namespace' object has no attribute 'n_clusters'
+[W 2024-03-21 13:17:02,034] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 214, in <module>
+    main(args)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 183, in main
+    study.optimize(objective, n_trials=args.n_trials, gc_after_trial=True)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 132, in objective
+    n_clusters = trial.suggest_categorical('n_clusters', args.n_clusters)
+AttributeError: 'Namespace' object has no attribute 'n_clusters'
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/autoencoder_optuna/
+------
+[I 2024-03-21 13:17:33,922] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 5000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+  0%|          | 0/5000 [00:00<?, ?it/s]  0%|          | 0/5000 [00:00<?, ?it/s]
+[W 2024-03-21 13:17:34,092] Trial 0 failed with parameters: {'N_epochs': 5000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001} because of the following error: RuntimeError('Input type (torch.cuda.DoubleTensor) and weight type (torch.cuda.FloatTensor) should be the same').
+Traceback (most recent call last):
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 155, in objective
+    auc_list = evaluate_model(model, data, labels, N_epochs, batch_size, lr, training_loss)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 63, in evaluate_model
+    model = train_AE(model, X, N_epochs, batch_size, lr, training_loss)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 46, in train_AE
+    output = model(batch)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vitorro/Repositories/sensors2024/sensors/nn/models.py", line 129, in forward
+    f = self.conv1d(x)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 313, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 309, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: Input type (torch.cuda.DoubleTensor) and weight type (torch.cuda.FloatTensor) should be the same
+[W 2024-03-21 13:17:34,094] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 212, in <module>
+    main(args)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 181, in main
+    study.optimize(objective, n_trials=args.n_trials, gc_after_trial=True)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 155, in objective
+    auc_list = evaluate_model(model, data, labels, N_epochs, batch_size, lr, training_loss)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 63, in evaluate_model
+    model = train_AE(model, X, N_epochs, batch_size, lr, training_loss)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 46, in train_AE
+    output = model(batch)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vitorro/Repositories/sensors2024/sensors/nn/models.py", line 129, in forward
+    f = self.conv1d(x)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 313, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 309, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: Input type (torch.cuda.DoubleTensor) and weight type (torch.cuda.FloatTensor) should be the same
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/autoencoder_optuna/
+------
+[I 2024-03-21 13:26:57,608] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 1000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:00<04:52,  3.41it/s]  2%|▏         | 16/1000 [00:00<00:19, 51.35it/s]  3%|▎         | 28/1000 [00:00<00:13, 72.43it/s]  4%|▍         | 42/1000 [00:00<00:10, 91.83it/s]  6%|▌         | 59/1000 [00:00<00:08, 114.78it/s]  7%|▋         | 73/1000 [00:00<00:09, 95.94it/s]   9%|▉         | 90/1000 [00:00<00:07, 114.04it/s] 11%|█         | 106/1000 [00:01<00:07, 125.60it/s] 12%|█▏        | 122/1000 [00:01<00:06, 134.17it/s] 14%|█▎        | 137/1000 [00:01<00:08, 105.83it/s] 15%|█▌        | 153/1000 [00:01<00:07, 118.29it/s] 17%|█▋        | 169/1000 [00:01<00:06, 128.64it/s] 18%|█▊        | 184/1000 [00:01<00:07, 106.61it/s] 20%|██        | 201/1000 [00:01<00:06, 121.08it/s] 22%|██▏       | 218/1000 [00:02<00:05, 132.24it/s] 24%|██▎       | 235/1000 [00:02<00:05, 140.66it/s] 25%|██▌       | 252/1000 [00:02<00:05, 148.35it/s] 27%|██▋       | 270/1000 [00:02<00:04, 154.87it/s] 29%|██▊       | 287/1000 [00:02<00:04, 158.13it/s] 30%|███       | 304/1000 [00:02<00:04, 160.43it/s] 32%|███▏      | 321/1000 [00:02<00:04, 161.96it/s] 34%|███▍      | 338/1000 [00:02<00:04, 161.51it/s] 36%|███▌      | 355/1000 [00:02<00:03, 162.65it/s] 37%|███▋      | 372/1000 [00:02<00:03, 162.89it/s] 39%|███▉      | 389/1000 [00:03<00:03, 163.40it/s] 41%|████      | 406/1000 [00:03<00:03, 163.54it/s] 42%|████▏     | 424/1000 [00:03<00:03, 165.81it/s] 44%|████▍     | 441/1000 [00:03<00:03, 166.91it/s] 46%|████▌     | 458/1000 [00:03<00:04, 124.00it/s] 48%|████▊     | 475/1000 [00:03<00:03, 133.96it/s] 49%|████▉     | 493/1000 [00:03<00:03, 143.51it/s] 51%|█████     | 511/1000 [00:03<00:03, 150.91it/s] 53%|█████▎    | 528/1000 [00:03<00:03, 155.25it/s] 55%|█████▍    | 545/1000 [00:04<00:02, 157.17it/s] 56%|█████▌    | 562/1000 [00:04<00:02, 158.74it/s] 58%|█████▊    | 579/1000 [00:04<00:02, 159.97it/s] 60%|█████▉    | 596/1000 [00:04<00:03, 125.51it/s] 61%|██████▏   | 613/1000 [00:04<00:02, 134.86it/s] 63%|██████▎   | 630/1000 [00:04<00:02, 141.98it/s] 65%|██████▍   | 647/1000 [00:04<00:02, 149.18it/s] 66%|██████▋   | 664/1000 [00:04<00:02, 154.40it/s] 68%|██████▊   | 680/1000 [00:05<00:02, 123.14it/s] 70%|██████▉   | 697/1000 [00:05<00:02, 134.06it/s] 71%|███████▏  | 714/1000 [00:05<00:02, 142.96it/s] 73%|███████▎  | 731/1000 [00:05<00:01, 149.51it/s] 75%|███████▍  | 748/1000 [00:05<00:01, 153.30it/s] 76%|███████▋  | 764/1000 [00:05<00:01, 122.00it/s] 78%|███████▊  | 781/1000 [00:05<00:01, 132.07it/s] 80%|███████▉  | 798/1000 [00:05<00:01, 140.41it/s] 81%|████████▏ | 813/1000 [00:06<00:01, 116.47it/s] 83%|████████▎ | 830/1000 [00:06<00:01, 128.14it/s] 85%|████████▍ | 847/1000 [00:06<00:01, 138.01it/s] 86%|████████▌ | 862/1000 [00:06<00:01, 114.52it/s] 88%|████████▊ | 878/1000 [00:06<00:00, 125.01it/s] 90%|████████▉ | 896/1000 [00:06<00:00, 136.87it/s] 91%|█████████▏| 914/1000 [00:06<00:00, 146.10it/s] 93%|█████████▎| 931/1000 [00:06<00:00, 151.57it/s] 95%|█████████▍| 948/1000 [00:07<00:00, 155.42it/s] 96%|█████████▋| 965/1000 [00:07<00:00, 158.16it/s] 98%|█████████▊| 982/1000 [00:07<00:00, 160.22it/s]100%|█████████▉| 999/1000 [00:07<00:00, 161.92it/s]100%|██████████| 1000/1000 [00:07<00:00, 136.22it/s]
+  0%|          | 0/1000 [00:00<?, ?it/s]  2%|▏         | 17/1000 [00:00<00:05, 163.86it/s]  3%|▎         | 34/1000 [00:00<00:05, 165.03it/s]  5%|▌         | 52/1000 [00:00<00:05, 167.94it/s]  7%|▋         | 70/1000 [00:00<00:05, 169.49it/s]  9%|▊         | 87/1000 [00:00<00:05, 169.22it/s] 10%|█         | 104/1000 [00:00<00:05, 167.50it/s] 12%|█▏        | 121/1000 [00:00<00:05, 165.97it/s] 14%|█▍        | 138/1000 [00:00<00:07, 120.41it/s] 16%|█▌        | 155/1000 [00:01<00:06, 131.34it/s] 17%|█▋        | 172/1000 [00:01<00:05, 140.05it/s] 19%|█▉        | 189/1000 [00:01<00:05, 146.60it/s] 21%|██        | 207/1000 [00:01<00:05, 153.39it/s] 22%|██▏       | 224/1000 [00:01<00:04, 157.67it/s] 24%|██▍       | 241/1000 [00:01<00:04, 158.73it/s] 26%|██▌       | 258/1000 [00:01<00:04, 160.50it/s] 28%|██▊       | 275/1000 [00:01<00:05, 125.46it/s] 29%|██▉       | 292/1000 [00:01<00:05, 135.97it/s] 31%|███       | 309/1000 [00:02<00:04, 143.33it/s] 33%|███▎      | 326/1000 [00:02<00:04, 149.21it/s] 34%|███▍      | 343/1000 [00:02<00:04, 153.97it/s] 36%|███▌      | 359/1000 [00:02<00:05, 124.74it/s] 38%|███▊      | 376/1000 [00:02<00:04, 135.01it/s] 39%|███▉      | 393/1000 [00:02<00:04, 143.24it/s] 41%|████      | 410/1000 [00:02<00:03, 149.75it/s] 43%|████▎     | 427/1000 [00:02<00:03, 155.20it/s] 44%|████▍     | 444/1000 [00:03<00:04, 124.64it/s] 46%|████▌     | 461/1000 [00:03<00:03, 134.91it/s] 48%|████▊     | 478/1000 [00:03<00:03, 143.71it/s] 49%|████▉     | 494/1000 [00:03<00:04, 120.25it/s] 51%|█████     | 511/1000 [00:03<00:03, 130.64it/s] 53%|█████▎    | 528/1000 [00:03<00:03, 138.97it/s] 54%|█████▍    | 543/1000 [00:03<00:03, 117.59it/s] 56%|█████▌    | 560/1000 [00:03<00:03, 129.37it/s] 58%|█████▊    | 577/1000 [00:04<00:03, 138.99it/s] 59%|█████▉    | 594/1000 [00:04<00:02, 146.54it/s] 61%|██████    | 612/1000 [00:04<00:02, 153.43it/s] 63%|██████▎   | 630/1000 [00:04<00:02, 158.47it/s] 65%|██████▍   | 647/1000 [00:04<00:02, 160.33it/s] 66%|██████▋   | 664/1000 [00:04<00:02, 161.98it/s] 68%|██████▊   | 682/1000 [00:04<00:01, 164.73it/s] 70%|███████   | 700/1000 [00:04<00:01, 166.84it/s] 72%|███████▏  | 718/1000 [00:04<00:01, 168.23it/s] 74%|███████▎  | 735/1000 [00:04<00:01, 167.48it/s] 75%|███████▌  | 752/1000 [00:05<00:01, 167.08it/s] 77%|███████▋  | 769/1000 [00:05<00:01, 166.95it/s] 79%|███████▊  | 786/1000 [00:05<00:01, 166.25it/s] 80%|████████  | 803/1000 [00:05<00:01, 166.68it/s] 82%|████████▏ | 820/1000 [00:05<00:01, 129.99it/s] 84%|████████▎ | 837/1000 [00:05<00:01, 139.24it/s] 86%|████████▌ | 855/1000 [00:05<00:00, 147.85it/s] 87%|████████▋ | 872/1000 [00:05<00:00, 153.12it/s] 89%|████████▉ | 889/1000 [00:06<00:00, 156.44it/s] 91%|█████████ | 906/1000 [00:06<00:00, 159.45it/s] 92%|█████████▏| 924/1000 [00:06<00:00, 163.03it/s] 94%|█████████▍| 942/1000 [00:06<00:00, 165.45it/s] 96%|█████████▌| 959/1000 [00:06<00:00, 130.28it/s] 98%|█████████▊| 976/1000 [00:06<00:00, 139.05it/s] 99%|█████████▉| 993/1000 [00:06<00:00, 145.87it/s]100%|██████████| 1000/1000 [00:06<00:00, 147.62it/s]
+  0%|          | 0/1000 [00:00<?, ?it/s]  2%|▏         | 17/1000 [00:00<00:06, 163.80it/s]  3%|▎         | 34/1000 [00:00<00:05, 164.45it/s]  5%|▌         | 51/1000 [00:00<00:08, 108.27it/s]  7%|▋         | 68/1000 [00:00<00:07, 125.14it/s]  8%|▊         | 85/1000 [00:00<00:06, 136.91it/s] 10%|█         | 102/1000 [00:00<00:06, 145.21it/s] 12%|█▏        | 118/1000 [00:00<00:07, 117.42it/s] 14%|█▎        | 135/1000 [00:01<00:06, 129.38it/s] 15%|█▌        | 152/1000 [00:01<00:06, 139.30it/s] 17%|█▋        | 167/1000 [00:01<00:07, 115.41it/s] 18%|█▊        | 184/1000 [00:01<00:06, 126.87it/s] 20%|██        | 201/1000 [00:01<00:05, 136.43it/s] 22%|██▏       | 216/1000 [00:01<00:07, 110.82it/s] 23%|██▎       | 234/1000 [00:01<00:06, 125.87it/s] 25%|██▌       | 252/1000 [00:01<00:05, 138.49it/s] 27%|██▋       | 270/1000 [00:02<00:04, 148.61it/s] 29%|██▉       | 288/1000 [00:02<00:04, 156.56it/s] 31%|███       | 306/1000 [00:02<00:04, 162.62it/s] 32%|███▏      | 324/1000 [00:02<00:04, 167.25it/s] 34%|███▍      | 342/1000 [00:02<00:03, 170.84it/s] 36%|███▌      | 360/1000 [00:02<00:03, 173.49it/s] 38%|███▊      | 378/1000 [00:02<00:03, 171.69it/s] 40%|███▉      | 396/1000 [00:02<00:03, 168.44it/s] 41%|████▏     | 414/1000 [00:02<00:03, 170.24it/s] 43%|████▎     | 432/1000 [00:02<00:03, 172.04it/s] 45%|████▌     | 450/1000 [00:03<00:03, 173.45it/s] 47%|████▋     | 468/1000 [00:03<00:03, 174.02it/s] 49%|████▊     | 486/1000 [00:03<00:03, 133.97it/s] 50%|█████     | 504/1000 [00:03<00:03, 144.49it/s] 52%|█████▏    | 522/1000 [00:03<00:03, 152.20it/s] 54%|█████▍    | 540/1000 [00:03<00:02, 158.97it/s] 56%|█████▌    | 558/1000 [00:03<00:02, 164.22it/s] 58%|█████▊    | 576/1000 [00:03<00:02, 168.10it/s] 59%|█████▉    | 594/1000 [00:03<00:02, 171.23it/s] 61%|██████    | 612/1000 [00:04<00:02, 173.38it/s] 63%|██████▎   | 630/1000 [00:04<00:02, 130.98it/s] 65%|██████▍   | 648/1000 [00:04<00:02, 141.57it/s] 67%|██████▋   | 666/1000 [00:04<00:02, 150.10it/s] 68%|██████▊   | 684/1000 [00:04<00:02, 156.40it/s] 70%|███████   | 702/1000 [00:04<00:01, 161.24it/s] 72%|███████▏  | 719/1000 [00:04<00:02, 128.74it/s] 74%|███████▎  | 737/1000 [00:05<00:01, 139.94it/s] 76%|███████▌  | 755/1000 [00:05<00:01, 149.10it/s] 77%|███████▋  | 773/1000 [00:05<00:01, 156.23it/s] 79%|███████▉  | 790/1000 [00:05<00:01, 128.36it/s] 81%|████████  | 808/1000 [00:05<00:01, 139.99it/s] 83%|████████▎ | 826/1000 [00:05<00:01, 148.69it/s] 84%|████████▍ | 842/1000 [00:05<00:01, 123.93it/s] 86%|████████▌ | 860/1000 [00:05<00:01, 135.42it/s] 88%|████████▊ | 878/1000 [00:06<00:00, 144.60it/s] 89%|████████▉ | 894/1000 [00:06<00:00, 121.81it/s] 91%|█████████ | 912/1000 [00:06<00:00, 134.36it/s] 93%|█████████▎| 930/1000 [00:06<00:00, 145.11it/s] 95%|█████████▍| 948/1000 [00:06<00:00, 153.57it/s] 97%|█████████▋| 966/1000 [00:06<00:00, 160.26it/s] 98%|█████████▊| 984/1000 [00:06<00:00, 165.11it/s]100%|██████████| 1000/1000 [00:06<00:00, 147.13it/s]
+  0%|          | 0/1000 [00:00<?, ?it/s]  2%|▏         | 18/1000 [00:00<00:05, 173.93it/s]  4%|▎         | 36/1000 [00:00<00:05, 174.71it/s]  5%|▌         | 54/1000 [00:00<00:05, 174.68it/s]  7%|▋         | 72/1000 [00:00<00:05, 174.63it/s]  9%|▉         | 90/1000 [00:00<00:05, 175.03it/s] 11%|█         | 108/1000 [00:00<00:05, 175.76it/s] 13%|█▎        | 126/1000 [00:00<00:04, 176.35it/s] 14%|█▍        | 144/1000 [00:00<00:04, 176.84it/s] 16%|█▌        | 162/1000 [00:00<00:04, 177.32it/s] 18%|█▊        | 180/1000 [00:01<00:06, 131.54it/s] 20%|█▉        | 198/1000 [00:01<00:05, 142.57it/s] 22%|██▏       | 216/1000 [00:01<00:05, 150.63it/s] 23%|██▎       | 234/1000 [00:01<00:04, 156.76it/s] 25%|██▌       | 252/1000 [00:01<00:04, 161.69it/s] 27%|██▋       | 270/1000 [00:01<00:04, 165.40it/s] 29%|██▉       | 288/1000 [00:01<00:04, 167.71it/s] 31%|███       | 306/1000 [00:01<00:05, 132.73it/s] 32%|███▏      | 324/1000 [00:02<00:04, 143.09it/s] 34%|███▍      | 342/1000 [00:02<00:04, 151.42it/s] 36%|███▌      | 360/1000 [00:02<00:04, 158.06it/s] 38%|███▊      | 378/1000 [00:02<00:03, 163.09it/s] 40%|███▉      | 395/1000 [00:02<00:04, 132.04it/s] 41%|████▏     | 413/1000 [00:02<00:04, 142.97it/s] 43%|████▎     | 431/1000 [00:02<00:03, 151.11it/s] 45%|████▍     | 449/1000 [00:02<00:03, 156.75it/s] 47%|████▋     | 466/1000 [00:03<00:04, 127.88it/s] 48%|████▊     | 484/1000 [00:03<00:03, 138.65it/s] 50%|█████     | 502/1000 [00:03<00:03, 147.09it/s] 52%|█████▏    | 520/1000 [00:03<00:03, 153.61it/s] 54%|█████▎    | 537/1000 [00:03<00:03, 126.57it/s] 55%|█████▌    | 554/1000 [00:03<00:03, 136.72it/s] 57%|█████▋    | 570/1000 [00:03<00:03, 115.42it/s] 59%|█████▉    | 588/1000 [00:03<00:03, 129.76it/s] 61%|██████    | 606/1000 [00:04<00:02, 141.71it/s] 62%|██████▏   | 624/1000 [00:04<00:02, 150.97it/s] 64%|██████▍   | 642/1000 [00:04<00:02, 157.57it/s] 66%|██████▌   | 660/1000 [00:04<00:02, 162.17it/s] 68%|██████▊   | 678/1000 [00:04<00:01, 166.16it/s] 70%|██████▉   | 696/1000 [00:04<00:01, 169.02it/s] 71%|███████▏  | 714/1000 [00:04<00:01, 170.81it/s] 73%|███████▎  | 732/1000 [00:04<00:01, 172.06it/s] 75%|███████▌  | 750/1000 [00:04<00:01, 172.99it/s] 77%|███████▋  | 768/1000 [00:04<00:01, 174.33it/s] 79%|███████▊  | 786/1000 [00:05<00:01, 175.14it/s] 80%|████████  | 804/1000 [00:05<00:01, 175.99it/s] 82%|████████▏ | 822/1000 [00:05<00:01, 176.70it/s] 84%|████████▍ | 840/1000 [00:05<00:00, 177.34it/s] 86%|████████▌ | 858/1000 [00:05<00:01, 138.94it/s] 88%|████████▊ | 876/1000 [00:05<00:00, 148.40it/s] 89%|████████▉ | 894/1000 [00:05<00:00, 155.42it/s] 91%|█████████ | 911/1000 [00:05<00:00, 155.77it/s] 93%|█████████▎| 929/1000 [00:06<00:00, 160.63it/s] 95%|█████████▍| 947/1000 [00:06<00:00, 164.40it/s] 96%|█████████▋| 965/1000 [00:06<00:00, 166.92it/s] 98%|█████████▊| 982/1000 [00:06<00:00, 130.75it/s]100%|██████████| 1000/1000 [00:06<00:00, 141.64it/s]100%|██████████| 1000/1000 [00:06<00:00, 153.56it/s]
+  0%|          | 0/1000 [00:00<?, ?it/s]  2%|▏         | 18/1000 [00:00<00:05, 168.26it/s]  4%|▎         | 35/1000 [00:00<00:05, 161.16it/s]  5%|▌         | 53/1000 [00:00<00:05, 165.82it/s]  7%|▋         | 71/1000 [00:00<00:05, 168.79it/s]  9%|▉         | 88/1000 [00:00<00:07, 126.54it/s] 11%|█         | 106/1000 [00:00<00:06, 139.14it/s] 12%|█▏        | 124/1000 [00:00<00:05, 148.56it/s] 14%|█▍        | 142/1000 [00:00<00:05, 155.93it/s] 16%|█▌        | 159/1000 [00:01<00:06, 126.49it/s] 18%|█▊        | 177/1000 [00:01<00:05, 138.51it/s] 20%|█▉        | 195/1000 [00:01<00:05, 147.95it/s] 21%|██        | 211/1000 [00:01<00:06, 123.38it/s] 23%|██▎       | 229/1000 [00:01<00:05, 135.18it/s] 25%|██▍       | 246/1000 [00:01<00:05, 143.71it/s] 26%|██▌       | 262/1000 [00:01<00:06, 119.36it/s] 28%|██▊       | 280/1000 [00:02<00:05, 132.36it/s] 30%|██▉       | 298/1000 [00:02<00:04, 142.96it/s] 32%|███▏      | 316/1000 [00:02<00:04, 151.15it/s] 33%|███▎      | 334/1000 [00:02<00:04, 157.89it/s] 35%|███▌      | 352/1000 [00:02<00:03, 163.31it/s] 37%|███▋      | 370/1000 [00:02<00:03, 167.24it/s] 39%|███▉      | 388/1000 [00:02<00:03, 170.30it/s] 41%|████      | 406/1000 [00:02<00:03, 172.59it/s] 42%|████▏     | 424/1000 [00:02<00:03, 174.17it/s] 44%|████▍     | 442/1000 [00:02<00:03, 175.57it/s] 46%|████▌     | 460/1000 [00:03<00:03, 176.22it/s] 48%|████▊     | 478/1000 [00:03<00:02, 175.85it/s] 50%|████▉     | 496/1000 [00:03<00:02, 175.12it/s] 51%|█████▏    | 514/1000 [00:03<00:02, 174.84it/s] 53%|█████▎    | 532/1000 [00:03<00:03, 136.01it/s] 55%|█████▌    | 550/1000 [00:03<00:03, 145.44it/s] 57%|█████▋    | 568/1000 [00:03<00:02, 152.88it/s] 59%|█████▊    | 586/1000 [00:03<00:02, 158.86it/s] 60%|██████    | 604/1000 [00:03<00:02, 162.58it/s] 62%|██████▏   | 622/1000 [00:04<00:02, 166.11it/s] 64%|██████▍   | 640/1000 [00:04<00:02, 168.76it/s] 66%|██████▌   | 658/1000 [00:04<00:02, 170.61it/s] 68%|██████▊   | 676/1000 [00:04<00:02, 132.92it/s] 69%|██████▉   | 694/1000 [00:04<00:02, 142.93it/s] 71%|███████   | 712/1000 [00:04<00:01, 150.51it/s] 73%|███████▎  | 730/1000 [00:04<00:01, 156.59it/s] 75%|███████▍  | 748/1000 [00:04<00:01, 161.47it/s] 76%|███████▋  | 765/1000 [00:05<00:01, 129.90it/s] 78%|███████▊  | 783/1000 [00:05<00:01, 140.44it/s] 80%|████████  | 801/1000 [00:05<00:01, 149.17it/s] 82%|████████▏ | 819/1000 [00:05<00:01, 156.09it/s] 84%|████████▎ | 836/1000 [00:05<00:01, 128.60it/s] 85%|████████▌ | 854/1000 [00:05<00:01, 139.92it/s] 87%|████████▋ | 872/1000 [00:05<00:00, 149.14it/s] 89%|████████▉ | 888/1000 [00:05<00:00, 124.38it/s] 91%|█████████ | 906/1000 [00:06<00:00, 135.81it/s] 92%|█████████▏| 924/1000 [00:06<00:00, 144.80it/s] 94%|█████████▍| 940/1000 [00:06<00:00, 121.97it/s] 96%|█████████▌| 958/1000 [00:06<00:00, 134.43it/s] 98%|█████████▊| 976/1000 [00:06<00:00, 144.67it/s] 99%|█████████▉| 994/1000 [00:06<00:00, 152.75it/s]100%|██████████| 1000/1000 [00:06<00:00, 148.95it/s]
+[I 2024-03-21 13:27:34,137] Trial 0 finished with value: {'auc': 0.729} and parameters: {'N_epochs': 1000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 0 with value: 0.729.
+Trial: 1
+- N Epochs: 1000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+  0%|          | 0/1000 [00:00<?, ?it/s]  2%|▏         | 17/1000 [00:00<00:05, 169.44it/s]  4%|▎         | 35/1000 [00:00<00:05, 170.70it/s]  5%|▌         | 53/1000 [00:00<00:05, 171.89it/s]  7%|▋         | 71/1000 [00:00<00:07, 125.57it/s]  9%|▉         | 89/1000 [00:00<00:06, 139.01it/s] 10%|█         | 105/1000 [00:00<00:07, 116.41it/s] 12%|█▏        | 123/1000 [00:00<00:06, 131.46it/s] 14%|█▍        | 141/1000 [00:01<00:05, 143.54it/s] 16%|█▌        | 159/1000 [00:01<00:05, 152.78it/s] 18%|█▊        | 177/1000 [00:01<00:05, 159.89it/s] 20%|█▉        | 195/1000 [00:01<00:04, 165.45it/s] 21%|██▏       | 213/1000 [00:01<00:04, 169.05it/s] 23%|██▎       | 231/1000 [00:01<00:04, 170.84it/s] 25%|██▍       | 249/1000 [00:01<00:04, 168.10it/s] 27%|██▋       | 267/1000 [00:01<00:04, 170.01it/s] 28%|██▊       | 285/1000 [00:01<00:04, 171.69it/s] 30%|███       | 303/1000 [00:01<00:04, 172.56it/s] 32%|███▏      | 321/1000 [00:02<00:03, 172.89it/s] 34%|███▍      | 339/1000 [00:02<00:03, 173.29it/s] 36%|███▌      | 357/1000 [00:02<00:03, 174.17it/s] 38%|███▊      | 375/1000 [00:02<00:03, 175.00it/s] 39%|███▉      | 393/1000 [00:02<00:04, 136.26it/s] 41%|████      | 411/1000 [00:02<00:04, 146.51it/s] 43%|████▎     | 429/1000 [00:02<00:03, 154.76it/s] 45%|████▍     | 447/1000 [00:02<00:03, 161.07it/s] 46%|████▋     | 465/1000 [00:02<00:03, 165.16it/s] 48%|████▊     | 483/1000 [00:03<00:03, 167.85it/s] 50%|█████     | 501/1000 [00:03<00:02, 169.65it/s] 52%|█████▏    | 519/1000 [00:03<00:03, 134.22it/s] 54%|█████▎    | 537/1000 [00:03<00:03, 143.79it/s] 56%|█████▌    | 555/1000 [00:03<00:02, 151.52it/s] 57%|█████▋    | 573/1000 [00:03<00:02, 157.78it/s] 59%|█████▉    | 591/1000 [00:03<00:02, 161.58it/s] 61%|██████    | 609/1000 [00:03<00:03, 127.91it/s] 63%|██████▎   | 627/1000 [00:04<00:02, 139.17it/s] 64%|██████▍   | 645/1000 [00:04<00:02, 148.77it/s] 66%|██████▋   | 663/1000 [00:04<00:02, 156.24it/s] 68%|██████▊   | 680/1000 [00:04<00:02, 128.88it/s] 70%|██████▉   | 698/1000 [00:04<00:02, 139.43it/s] 72%|███████▏  | 716/1000 [00:04<00:01, 148.10it/s] 73%|███████▎  | 734/1000 [00:04<00:01, 154.61it/s] 75%|███████▌  | 751/1000 [00:04<00:01, 126.77it/s] 77%|███████▋  | 769/1000 [00:05<00:01, 137.71it/s] 78%|███████▊  | 784/1000 [00:05<00:01, 118.17it/s] 80%|████████  | 802/1000 [00:05<00:01, 131.93it/s] 82%|████████▏ | 820/1000 [00:05<00:01, 143.35it/s] 84%|████████▍ | 838/1000 [00:05<00:01, 152.64it/s] 86%|████████▌ | 856/1000 [00:05<00:00, 159.96it/s] 87%|████████▋ | 874/1000 [00:05<00:00, 165.22it/s] 89%|████████▉ | 892/1000 [00:05<00:00, 168.50it/s] 91%|█████████ | 910/1000 [00:05<00:00, 170.52it/s] 93%|█████████▎| 928/1000 [00:06<00:00, 171.92it/s] 95%|█████████▍| 946/1000 [00:06<00:00, 173.16it/s] 96%|█████████▋| 964/1000 [00:06<00:00, 173.73it/s] 98%|█████████▊| 982/1000 [00:06<00:00, 174.06it/s]100%|██████████| 1000/1000 [00:06<00:00, 174.38it/s]100%|██████████| 1000/1000 [00:06<00:00, 154.16it/s]
+  0%|          | 0/1000 [00:00<?, ?it/s]  2%|▏         | 18/1000 [00:00<00:05, 178.99it/s]  4%|▎         | 36/1000 [00:00<00:05, 178.98it/s]  5%|▌         | 54/1000 [00:00<00:05, 178.17it/s]  7%|▋         | 72/1000 [00:00<00:07, 127.96it/s]  9%|▉         | 90/1000 [00:00<00:06, 141.76it/s] 11%|█         | 108/1000 [00:00<00:05, 151.34it/s] 13%|█▎        | 126/1000 [00:00<00:05, 157.94it/s] 14%|█▍        | 144/1000 [00:00<00:05, 162.63it/s] 16%|█▌        | 162/1000 [00:01<00:05, 166.28it/s] 18%|█▊        | 180/1000 [00:01<00:04, 169.32it/s] 20%|█▉        | 198/1000 [00:01<00:05, 134.64it/s] 22%|██▏       | 216/1000 [00:01<00:05, 145.08it/s] 23%|██▎       | 234/1000 [00:01<00:04, 153.45it/s] 25%|██▌       | 252/1000 [00:01<00:04, 160.05it/s] 27%|██▋       | 270/1000 [00:01<00:04, 164.47it/s] 29%|██▉       | 288/1000 [00:01<00:05, 133.51it/s] 31%|███       | 306/1000 [00:02<00:04, 143.02it/s] 32%|███▏      | 324/1000 [00:02<00:04, 150.91it/s] 34%|███▍      | 342/1000 [00:02<00:04, 156.48it/s] 36%|███▌      | 359/1000 [00:02<00:05, 127.97it/s] 38%|███▊      | 377/1000 [00:02<00:04, 139.12it/s] 40%|███▉      | 395/1000 [00:02<00:04, 148.10it/s] 41%|████▏     | 413/1000 [00:02<00:03, 155.19it/s] 43%|████▎     | 430/1000 [00:02<00:04, 128.53it/s] 45%|████▍     | 448/1000 [00:03<00:03, 139.97it/s] 46%|████▋     | 464/1000 [00:03<00:04, 120.50it/s] 48%|████▊     | 482/1000 [00:03<00:03, 133.40it/s] 50%|█████     | 500/1000 [00:03<00:03, 143.62it/s] 52%|█████▏    | 518/1000 [00:03<00:03, 151.87it/s] 54%|█████▎    | 536/1000 [00:03<00:02, 158.28it/s] 55%|█████▌    | 554/1000 [00:03<00:02, 162.94it/s] 57%|█████▋    | 572/1000 [00:03<00:02, 166.40it/s] 59%|█████▉    | 590/1000 [00:03<00:02, 168.92it/s] 61%|██████    | 608/1000 [00:04<00:02, 170.18it/s] 63%|██████▎   | 626/1000 [00:04<00:02, 172.17it/s] 64%|██████▍   | 644/1000 [00:04<00:02, 173.81it/s] 66%|██████▌   | 662/1000 [00:04<00:01, 175.02it/s] 68%|██████▊   | 680/1000 [00:04<00:01, 175.94it/s] 70%|██████▉   | 698/1000 [00:04<00:01, 177.03it/s] 72%|███████▏  | 716/1000 [00:04<00:01, 177.71it/s] 73%|███████▎  | 734/1000 [00:04<00:01, 177.46it/s] 75%|███████▌  | 752/1000 [00:04<00:01, 133.11it/s] 77%|███████▋  | 770/1000 [00:05<00:01, 143.40it/s] 79%|███████▉  | 788/1000 [00:05<00:01, 151.37it/s] 81%|████████  | 806/1000 [00:05<00:01, 157.39it/s] 82%|████████▏ | 824/1000 [00:05<00:01, 161.98it/s] 84%|████████▍ | 842/1000 [00:05<00:00, 165.96it/s] 86%|████████▌ | 860/1000 [00:05<00:00, 168.90it/s] 88%|████████▊ | 878/1000 [00:05<00:00, 135.15it/s] 90%|████████▉ | 896/1000 [00:05<00:00, 145.41it/s] 91%|█████████▏| 914/1000 [00:05<00:00, 153.68it/s] 93%|█████████▎| 932/1000 [00:06<00:00, 160.07it/s] 95%|█████████▌| 950/1000 [00:06<00:00, 164.37it/s] 97%|█████████▋| 967/1000 [00:06<00:00, 131.65it/s] 98%|█████████▊| 985/1000 [00:06<00:00, 142.02it/s]100%|██████████| 1000/1000 [00:06<00:00, 152.49it/s]
+  0%|          | 0/1000 [00:00<?, ?it/s]  2%|▏         | 18/1000 [00:00<00:05, 175.21it/s]  4%|▎         | 36/1000 [00:00<00:05, 175.28it/s]  5%|▌         | 54/1000 [00:00<00:07, 123.97it/s]  7%|▋         | 72/1000 [00:00<00:06, 140.40it/s]  9%|▉         | 90/1000 [00:00<00:06, 150.88it/s] 11%|█         | 107/1000 [00:00<00:07, 123.63it/s] 12%|█▎        | 125/1000 [00:00<00:06, 136.33it/s] 14%|█▍        | 142/1000 [00:01<00:07, 117.40it/s] 16%|█▌        | 160/1000 [00:01<00:06, 130.98it/s] 18%|█▊        | 178/1000 [00:01<00:05, 142.42it/s] 20%|█▉        | 196/1000 [00:01<00:05, 151.64it/s] 21%|██▏       | 214/1000 [00:01<00:04, 158.76it/s] 23%|██▎       | 232/1000 [00:01<00:04, 164.10it/s] 25%|██▌       | 250/1000 [00:01<00:04, 168.00it/s] 27%|██▋       | 268/1000 [00:01<00:04, 171.10it/s] 29%|██▊       | 286/1000 [00:01<00:04, 173.57it/s] 30%|███       | 304/1000 [00:02<00:03, 175.23it/s] 32%|███▏      | 322/1000 [00:02<00:03, 175.59it/s] 34%|███▍      | 340/1000 [00:02<00:03, 175.29it/s] 36%|███▌      | 358/1000 [00:02<00:03, 175.07it/s] 38%|███▊      | 376/1000 [00:02<00:03, 175.18it/s] 39%|███▉      | 394/1000 [00:02<00:03, 175.09it/s] 41%|████      | 412/1000 [00:02<00:03, 175.00it/s] 43%|████▎     | 430/1000 [00:02<00:04, 136.66it/s] 45%|████▍     | 448/1000 [00:02<00:03, 146.47it/s] 47%|████▋     | 466/1000 [00:03<00:03, 154.20it/s] 48%|████▊     | 484/1000 [00:03<00:03, 160.28it/s] 50%|█████     | 502/1000 [00:03<00:03, 164.76it/s] 52%|█████▏    | 520/1000 [00:03<00:02, 168.35it/s] 54%|█████▍    | 538/1000 [00:03<00:02, 171.10it/s] 56%|█████▌    | 556/1000 [00:03<00:03, 135.75it/s] 57%|█████▋    | 574/1000 [00:03<00:02, 145.03it/s] 59%|█████▉    | 592/1000 [00:03<00:02, 152.68it/s] 61%|██████    | 610/1000 [00:03<00:02, 158.60it/s] 63%|██████▎   | 628/1000 [00:04<00:02, 162.79it/s] 65%|██████▍   | 646/1000 [00:04<00:02, 131.18it/s] 66%|██████▋   | 664/1000 [00:04<00:02, 141.70it/s] 68%|██████▊   | 682/1000 [00:04<00:02, 150.32it/s] 70%|███████   | 700/1000 [00:04<00:01, 157.15it/s] 72%|███████▏  | 717/1000 [00:04<00:02, 129.80it/s] 74%|███████▎  | 735/1000 [00:04<00:01, 141.19it/s] 75%|███████▌  | 753/1000 [00:04<00:01, 150.23it/s] 77%|███████▋  | 771/1000 [00:05<00:01, 156.62it/s] 79%|███████▉  | 788/1000 [00:05<00:01, 128.96it/s] 81%|████████  | 806/1000 [00:05<00:01, 139.69it/s] 82%|████████▏ | 822/1000 [00:05<00:01, 119.86it/s] 84%|████████▍ | 840/1000 [00:05<00:01, 132.79it/s] 86%|████████▌ | 858/1000 [00:05<00:00, 143.51it/s] 88%|████████▊ | 876/1000 [00:05<00:00, 152.37it/s] 89%|████████▉ | 894/1000 [00:05<00:00, 159.22it/s] 91%|█████████ | 912/1000 [00:06<00:00, 164.41it/s] 93%|█████████▎| 930/1000 [00:06<00:00, 168.39it/s] 95%|█████████▍| 948/1000 [00:06<00:00, 171.37it/s] 97%|█████████▋| 966/1000 [00:06<00:00, 173.80it/s] 98%|█████████▊| 984/1000 [00:06<00:00, 175.27it/s]100%|██████████| 1000/1000 [00:06<00:00, 153.33it/s]
+  0%|          | 0/1000 [00:00<?, ?it/s]  2%|▏         | 18/1000 [00:00<00:05, 175.12it/s]  4%|▎         | 36/1000 [00:00<00:05, 176.29it/s]  5%|▌         | 54/1000 [00:00<00:05, 176.97it/s]  7%|▋         | 72/1000 [00:00<00:05, 177.38it/s]  9%|▉         | 90/1000 [00:00<00:05, 177.75it/s] 11%|█         | 108/1000 [00:00<00:06, 134.17it/s] 13%|█▎        | 126/1000 [00:00<00:05, 145.93it/s] 14%|█▍        | 144/1000 [00:00<00:05, 154.31it/s] 16%|█▌        | 162/1000 [00:01<00:05, 160.12it/s] 18%|█▊        | 180/1000 [00:01<00:04, 164.31it/s] 20%|█▉        | 198/1000 [00:01<00:04, 167.48it/s] 22%|██▏       | 216/1000 [00:01<00:04, 169.27it/s] 23%|██▎       | 234/1000 [00:01<00:05, 133.99it/s] 25%|██▌       | 252/1000 [00:01<00:05, 144.07it/s] 27%|██▋       | 270/1000 [00:01<00:04, 152.29it/s] 29%|██▉       | 288/1000 [00:01<00:04, 158.61it/s] 31%|███       | 306/1000 [00:01<00:04, 163.55it/s] 32%|███▏      | 324/1000 [00:02<00:04, 167.25it/s] 34%|███▍      | 342/1000 [00:02<00:04, 134.23it/s] 36%|███▌      | 360/1000 [00:02<00:04, 144.59it/s] 38%|███▊      | 378/1000 [00:02<00:04, 152.32it/s] 40%|███▉      | 395/1000 [00:02<00:04, 125.27it/s] 41%|████▏     | 413/1000 [00:02<00:04, 136.48it/s] 43%|████▎     | 430/1000 [00:02<00:03, 144.44it/s] 45%|████▍     | 448/1000 [00:02<00:03, 151.75it/s] 46%|████▋     | 464/1000 [00:03<00:04, 121.56it/s] 48%|████▊     | 482/1000 [00:03<00:03, 133.99it/s] 50%|█████     | 500/1000 [00:03<00:04, 118.10it/s] 52%|█████▏    | 518/1000 [00:03<00:03, 131.63it/s] 54%|█████▎    | 536/1000 [00:03<00:03, 143.13it/s] 55%|█████▌    | 554/1000 [00:03<00:02, 152.33it/s] 57%|█████▋    | 572/1000 [00:03<00:02, 159.13it/s] 59%|█████▉    | 590/1000 [00:03<00:02, 164.51it/s] 61%|██████    | 608/1000 [00:04<00:02, 168.50it/s] 63%|██████▎   | 626/1000 [00:04<00:02, 171.44it/s] 64%|██████▍   | 644/1000 [00:04<00:02, 173.52it/s] 66%|██████▌   | 662/1000 [00:04<00:01, 175.12it/s] 68%|██████▊   | 680/1000 [00:04<00:01, 176.27it/s] 70%|██████▉   | 698/1000 [00:04<00:01, 177.09it/s] 72%|███████▏  | 716/1000 [00:04<00:01, 177.68it/s] 73%|███████▎  | 734/1000 [00:04<00:01, 178.05it/s] 75%|███████▌  | 752/1000 [00:04<00:01, 178.48it/s] 77%|███████▋  | 770/1000 [00:04<00:01, 178.78it/s] 79%|███████▉  | 788/1000 [00:05<00:01, 139.52it/s] 81%|████████  | 806/1000 [00:05<00:01, 149.33it/s] 82%|████████▏ | 824/1000 [00:05<00:01, 157.08it/s] 84%|████████▍ | 842/1000 [00:05<00:00, 163.15it/s] 86%|████████▌ | 860/1000 [00:05<00:00, 167.78it/s] 88%|████████▊ | 878/1000 [00:05<00:00, 170.95it/s] 90%|████████▉ | 896/1000 [00:05<00:00, 173.16it/s] 91%|█████████▏| 914/1000 [00:05<00:00, 137.53it/s] 93%|█████████▎| 932/1000 [00:06<00:00, 147.62it/s] 95%|█████████▌| 950/1000 [00:06<00:00, 155.65it/s] 97%|█████████▋| 968/1000 [00:06<00:00, 161.78it/s] 99%|█████████▊| 986/1000 [00:06<00:00, 166.41it/s]100%|██████████| 1000/1000 [00:06<00:00, 155.73it/s]
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 4/1000 [00:00<00:29, 33.43it/s]  2%|▏         | 22/1000 [00:00<00:08, 112.16it/s]  4%|▍         | 40/1000 [00:00<00:06, 140.82it/s]  6%|▌         | 58/1000 [00:00<00:06, 155.00it/s]  7%|▋         | 74/1000 [00:00<00:07, 122.13it/s]  9%|▉         | 92/1000 [00:00<00:06, 137.52it/s] 11%|█         | 110/1000 [00:00<00:05, 148.91it/s] 13%|█▎        | 128/1000 [00:00<00:05, 157.09it/s] 14%|█▍        | 145/1000 [00:01<00:06, 128.46it/s] 16%|█▋        | 163/1000 [00:01<00:05, 140.47it/s] 18%|█▊        | 179/1000 [00:01<00:06, 120.34it/s] 20%|█▉        | 197/1000 [00:01<00:05, 134.17it/s] 22%|██▏       | 216/1000 [00:01<00:05, 146.24it/s] 24%|██▎       | 235/1000 [00:01<00:04, 155.65it/s] 25%|██▌       | 254/1000 [00:01<00:04, 162.55it/s] 27%|██▋       | 272/1000 [00:01<00:04, 167.24it/s] 29%|██▉       | 290/1000 [00:01<00:04, 170.77it/s] 31%|███       | 308/1000 [00:02<00:03, 173.35it/s] 33%|███▎      | 326/1000 [00:02<00:03, 175.28it/s] 34%|███▍      | 344/1000 [00:02<00:03, 176.61it/s] 36%|███▌      | 362/1000 [00:02<00:03, 177.51it/s] 38%|███▊      | 380/1000 [00:02<00:03, 178.21it/s] 40%|███▉      | 398/1000 [00:02<00:03, 178.70it/s] 42%|████▏     | 416/1000 [00:02<00:03, 179.04it/s] 44%|████▎     | 435/1000 [00:02<00:03, 179.42it/s] 45%|████▌     | 453/1000 [00:02<00:03, 140.57it/s] 47%|████▋     | 471/1000 [00:03<00:03, 150.11it/s] 49%|████▉     | 489/1000 [00:03<00:03, 157.67it/s] 51%|█████     | 507/1000 [00:03<00:03, 163.50it/s] 52%|█████▎    | 525/1000 [00:03<00:02, 168.02it/s] 54%|█████▍    | 543/1000 [00:03<00:02, 171.24it/s] 56%|█████▌    | 561/1000 [00:03<00:02, 173.39it/s] 58%|█████▊    | 579/1000 [00:03<00:02, 174.96it/s] 60%|█████▉    | 597/1000 [00:03<00:02, 139.02it/s] 62%|██████▏   | 615/1000 [00:03<00:02, 148.73it/s] 63%|██████▎   | 633/1000 [00:04<00:02, 156.46it/s] 65%|██████▌   | 651/1000 [00:04<00:02, 162.40it/s] 67%|██████▋   | 669/1000 [00:04<00:01, 166.93it/s] 69%|██████▊   | 687/1000 [00:04<00:02, 135.26it/s] 70%|███████   | 705/1000 [00:04<00:02, 145.58it/s] 72%|███████▏  | 723/1000 [00:04<00:01, 153.89it/s] 74%|███████▍  | 741/1000 [00:04<00:01, 160.21it/s] 76%|███████▌  | 758/1000 [00:04<00:01, 131.40it/s] 78%|███████▊  | 776/1000 [00:05<00:01, 142.53it/s] 79%|███████▉  | 794/1000 [00:05<00:01, 151.35it/s] 81%|████████  | 811/1000 [00:05<00:01, 126.49it/s] 83%|████████▎ | 829/1000 [00:05<00:01, 138.32it/s] 85%|████████▍ | 847/1000 [00:05<00:01, 147.98it/s] 86%|████████▋ | 863/1000 [00:05<00:01, 124.36it/s] 88%|████████▊ | 881/1000 [00:05<00:00, 137.39it/s] 90%|████████▉ | 899/1000 [00:05<00:00, 148.09it/s] 92%|█████████▏| 917/1000 [00:06<00:00, 156.51it/s] 94%|█████████▎| 935/1000 [00:06<00:00, 162.88it/s] 95%|█████████▌| 953/1000 [00:06<00:00, 167.64it/s] 97%|█████████▋| 971/1000 [00:06<00:00, 171.16it/s] 99%|█████████▉| 990/1000 [00:06<00:00, 173.90it/s]100%|██████████| 1000/1000 [00:06<00:00, 153.37it/s]
+[I 2024-03-21 13:28:09,077] Trial 1 finished with value: {'auc': 0.917} and parameters: {'N_epochs': 1000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 1 with value: 0.917.
+____ END OF STUDY ___
+
+
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/autoencoder_optuna/
+------
+[I 2024-03-21 13:35:01,972] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 1000
+- N Layers: 5
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-21 13:35:43,460] Trial 0 finished with value: {'auc': 0.83} and parameters: {'N_epochs': 1000, 'n_layers': 5, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 0 with value: 0.83.
+Trial: 1
+- N Epochs: 500
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-21 13:36:01,882] Trial 1 finished with value: {'auc': 0.875} and parameters: {'N_epochs': 500, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 1 with value: 0.875.
+____ END OF STUDY ___
+
+
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/autoencoder_optuna/
+------
+[I 2024-03-21 14:00:47,013] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 10000
+- N Layers: 2
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()

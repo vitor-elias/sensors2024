@@ -13,6 +13,8 @@ from optuna.samplers import TPESampler
 from sklearn.cluster import KMeans
 from tqdm import tqdm
 
+from torch.utils.data import DataLoader, TensorDataset
+
 import sensors.utils.utils as utils
 import sensors.utils.fault_detection as fd
 import sensors.nn.models as models
@@ -27,65 +29,52 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 warnings.simplefilter("ignore")
 
-def train_cluster(N_epochs, model, X, G, device, weight_loss=0.25, lr=1e-3):
+def train_AE(model, X, N_epochs, batch_size, lr, training_loss):
  
-    loss_evo = []
-    loss_mc_evo = []
-    loss_o_evo = []
-
-    X = torch.tensor(X)
-    X = X.to(device)
-
-    # Node coordinates
-    C = torch.tensor(G.coords)
-    A = torch.tensor(G.W.toarray()).float() #Using W as a float() tensor
-    A = A.to(device)    
+    dataset = TensorDataset(X, X)  # we want to reconstruct the same input
+    dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 
-    # num_clusters_per_feature = [5, 6]
-    # kmeans_feats = models.kmeans_features(C, num_clusters_per_feature).to(device).float()
-
-    kmeans_feats = None # CHANGE ALSO NUMBER OF EXTRA FEATS
-
     model.train()
     model.reset_parameters()
-    # for epoch in tqdm(range(N_epochs)):
+
     for epoch in range(N_epochs):
-        optimizer.zero_grad()
-        S, loss_mc, loss_o = model(X, A, kmeans_feats)
-        loss = loss_mc + weight_loss*loss_o
-        loss.backward()
-        optimizer.step()
-        loss_evo.append(loss.item())
-        loss_mc_evo.append(loss_mc.item())
-        loss_o_evo.append(loss_o.item())
+        for batch, _ in dataloader:
+            
+            optimizer.zero_grad()
+            output = model(batch)
+            loss = training_loss(batch, output)
+            loss.backward()
+            optimizer.step()
 
-    return S
+    return model
 
-def evaluate_model(model, weight_loss, N_epochs, data, labels, data_dfs, G, nodes_orig, device):
+def evaluate_model(model, data, labels, N_epochs, batch_size=2048, lr=1e-3, training_loss=torch.nn.MSELoss()):
 
-    cluster_score_list = []
     auc_list = []
     for i in range(data.shape[0]):
+
         X = data[i,:,:]
         label = labels[i,:]
-        df_anomaly = data_dfs[i]
+        model = train_AE(model, X, N_epochs, batch_size, lr, training_loss)
 
-        nodes = nodes_orig.copy()
+        model.eval()
+        Y = model(X)
 
-        S = train_cluster(N_epochs, model, X, G, device, weight_loss)
+        score_function = torch.nn.MSELoss(reduction='none')
+        score = torch.mean(score_function(X,Y), axis=1).cpu().detach().numpy()
 
-        cluster_score, auc = utils.get_score(nodes, df_anomaly, S)
-        
-        cluster_score_list.append(cluster_score)
+        tpr, fpr, _ = utils.roc_params(metric=score, label=label, interp=True)
+        auc = utils.compute_auc(tpr,fpr)
+
         auc_list.append(auc)
     
-    return cluster_score_list, auc_list
+    return auc_list
 
 def main(args):
 
-    if args.device is None:
+    if args.device=='auto':
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     else:
         device = args.device
@@ -117,6 +106,8 @@ def main(args):
                                                             partition=args.anomaly_partition,
                                                             anomaly_level=args.anomaly_level,
                                                             n_anomalies=args.n_anomalies)
+    data = torch.tensor(data).float()
+    data = data.to(device)
     
     exp_template = f'{args.anomaly_partition}parts_{args.anomaly_level}level_{args.n_anomalies}anomaly'
 
@@ -127,54 +118,53 @@ def main(args):
         gc.collect()
 
         # Possible hyperparameters
-        n_extra_feats = 0  # CHANGE ALSO KMEANS_FEATS IN TRAIN_CLUSTER
         conv1d_n_feats = 3
         conv1d_kernel_size = 60
         conv1d_stride = 30
-        graphconv_n_feats = 30
-
+        
         N_epochs = trial.suggest_categorical('N_epochs', args.N_epochs)
-        n_clusters = trial.suggest_categorical('n_clusters', args.n_clusters)
-        weight_loss = trial.suggest_categorical('weight_loss', args.weight_loss)
-        weight_coords = trial.suggest_categorical('weight_coords', args.weight_coords)
+        n_layers = trial.suggest_categorical('n_layers', args.n_layers)
+        reduction = trial.suggest_categorical('reduction', args.reduction)
+        batch_size = trial.suggest_categorical('batch_size', args.batch_size)
+        lr = trial.suggest_categorical('lr', args.lr)
+
+        training_loss = torch.nn.MSELoss()
 
         ###
 
         print(f"Trial: {trial.number}", flush=True)
         print(f"- N Epochs: {N_epochs}", flush=True)
-        print(f"- N Clusters: {n_clusters}", flush=True)
-        print(f"- Weight (loss): {weight_loss}", flush=True)
-        print(f"- Weight (coords): {weight_coords}", flush=True)
+        print(f"- N Layers: {n_layers}", flush=True)
+        print(f"- Reduction: {reduction}", flush=True)
+        print(f"- Batch size: {batch_size}", flush=True)
+        print(f"- Learing rate: {lr}", flush=True)
+        print(f"- Training loss: {training_loss}", flush=True)
 
         ###
 
-        model = models.ClusterTS(conv1d_n_feats, conv1d_kernel_size, conv1d_stride, graphconv_n_feats,
-                        n_timestamps, n_clusters, n_extra_feats, weight_coords)
+        model = models.Autoencoder(conv1d_n_feats, conv1d_kernel_size, conv1d_stride, 
+                        n_timestamps, n_layers, reduction)
         model = model.to(device)
 
-        cluster_score_list, auc_list = evaluate_model(model, weight_loss, N_epochs,
-                                                      data, labels, data_dfs, G, nodes, device)
-
-        trial.set_user_attr("mean_auc", np.mean(auc_list))
+        auc_list = evaluate_model(model, data, labels, N_epochs, batch_size, lr, training_loss)
+        
         trial.set_user_attr("std_auc", np.std(auc_list))
-        trial.set_user_attr("min_cscore", np.min(cluster_score_list)) 
-        trial.set_user_attr("std_cscore", np.std(cluster_score_list))
-        trial.set_user_attr("cscore_list", [round(elem, 2) for elem in cluster_score_list])
+        trial.set_user_attr("min_auc", np.min(auc_list)) 
         trial.set_user_attr("auc_list", [round(elem, 2) for elem in auc_list])
 
-        return np.mean(cluster_score_list).round(3)
+        return np.mean(auc_list).round(3)
 
 
     if not os.path.exists(args.log_dir):
         os.makedirs(args.log_dir,exist_ok=True)
 
     study = optuna.create_study(sampler=TPESampler(), direction='maximize',
-                                study_name='maximize_cluster_score: ' + exp_template,
+                                study_name='maximize_autoencoder_auc: ' + exp_template,
                                 pruner=optuna.pruners.MedianPruner(n_startup_trials=5,
                                                                    n_warmup_steps=24,
                                                                    interval_steps=6))
     
-    study.set_metric_names(['cscore'])
+    study.set_metric_names(['auc'])
 
     log_file = args.log_dir + 'log_' + exp_template + args.log_mod + '.pkl'
 
@@ -192,7 +182,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--n_trials', type=int, default=1)
-    parser.add_argument('--log-dir', type=str, default=root_dir+'/outputs/')
+    parser.add_argument('--log-dir', type=str, default=root_dir+'/outputs/autoencoder_optuna/')
     parser.add_argument('--log_mod', type=str, default='')
 
     parser.add_argument('--data_size', type=int, default=100)
@@ -201,9 +191,10 @@ if __name__ == "__main__":
     parser.add_argument('--n_anomalies', type=int, default=1)
 
     parser.add_argument('--N_epochs', type=int, nargs='+', default=[500, 1000, 5000, 10000])
-    parser.add_argument('--n_clusters', type=int, nargs='+', default=[5, 10, 15, 20])
-    parser.add_argument('--weight_loss', type=float, nargs='+', default=[0.25, 0.5, 0.75, 1])
-    parser.add_argument('--weight_coords', type=float, nargs='+', default=[0.25, 0.5, 0.75, 1])
+    parser.add_argument('--n_layers', type=int, nargs='+', default=[1, 2, 3, 5])
+    parser.add_argument('--reduction', type=float, nargs='+', default=[0.25, 0.5, 0.75])
+    parser.add_argument('--batch_size', type=int, nargs='+', default=[2048])
+    parser.add_argument('--lr', type=float, nargs='+', default=[1e-2, 1e-4])
 
     parser.add_argument('--device', type=str, default='cuda')
 

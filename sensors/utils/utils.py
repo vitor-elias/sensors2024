@@ -41,10 +41,10 @@ def visualize_map(nodes_input, color='smoothed', size=None, size_max = None, ani
                             )
     
 
-    cbar_y = 0.775 if animation_frame is not None else 0.9
+    # cbar_y = 0.775 if animation_frame is not None else 0.9
     fig.update_layout(coloraxis={'colorbar': {'title': {'text': ''},
                                             'len':0.5,
-                                            'y':cbar_y,
+                                            # 'y':cbar_y,
                                             'thickness':5
                                             }})
     fig.update_layout(title=title)
