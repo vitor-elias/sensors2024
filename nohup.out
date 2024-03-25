@@ -1407,3 +1407,1071 @@ Trial: 0
 - Batch size: 2048
 - Learing rate: 0.01
 - Training loss: MSELoss()
+[I 2024-03-21 15:50:49,445] Trial 0 finished with value: {'auc': 0.778} and parameters: {'N_epochs': 10000, 'n_layers': 2, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.01}. Best is trial 0 with value: 0.778.
+Trial: 1
+- N Epochs: 1000
+- N Layers: 1
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-21 16:02:11,106] Trial 1 finished with value: {'auc': 0.814} and parameters: {'N_epochs': 1000, 'n_layers': 1, 'reduction': 0.25, 'batch_size': 2048, 'lr': 0.01}. Best is trial 1 with value: 0.814.
+Trial: 2
+- N Epochs: 5000
+- N Layers: 5
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-21 17:04:00,316] Trial 2 finished with value: {'auc': 0.838} and parameters: {'N_epochs': 5000, 'n_layers': 5, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 2 with value: 0.838.
+Trial: 3
+- N Epochs: 5000
+- N Layers: 1
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-21 17:57:30,541] Trial 3 finished with value: {'auc': 0.802} and parameters: {'N_epochs': 5000, 'n_layers': 1, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.01}. Best is trial 2 with value: 0.838.
+Trial: 4
+- N Epochs: 500
+- N Layers: 3
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-21 18:03:50,397] Trial 4 finished with value: {'auc': 0.893} and parameters: {'N_epochs': 500, 'n_layers': 3, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 4 with value: 0.893.
+Trial: 5
+- N Epochs: 10000
+- N Layers: 3
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-21 20:02:57,613] Trial 5 finished with value: {'auc': 0.793} and parameters: {'N_epochs': 10000, 'n_layers': 3, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 4 with value: 0.893.
+Trial: 6
+- N Epochs: 10000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[W 2024-03-21 20:02:57,834] Trial 6 failed with parameters: {'N_epochs': 10000, 'n_layers': 3, 'reduction': 0.25, 'batch_size': 2048, 'lr': 0.01} because of the following error: RuntimeError("shape '[24, -1, 8]' is invalid for input of size 24").
+Traceback (most recent call last):
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 149, in objective
+    auc_list = evaluate_model(model, data, labels, N_epochs, batch_size, lr, training_loss)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 60, in evaluate_model
+    model = train_AE(model, X, N_epochs, batch_size, lr, training_loss)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 46, in train_AE
+    output = model(batch)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vitorro/Repositories/sensors2024/sensors/nn/models.py", line 135, in forward
+    o = o.reshape((o.shape[0], -1, self.L_out ))
+RuntimeError: shape '[24, -1, 8]' is invalid for input of size 24
+[W 2024-03-21 20:02:57,837] Trial 6 failed with value None.
+Traceback (most recent call last):
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 206, in <module>
+    main(args)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 175, in main
+    study.optimize(objective, n_trials=args.n_trials, gc_after_trial=True)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 149, in objective
+    auc_list = evaluate_model(model, data, labels, N_epochs, batch_size, lr, training_loss)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 60, in evaluate_model
+    model = train_AE(model, X, N_epochs, batch_size, lr, training_loss)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 46, in train_AE
+    output = model(batch)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vitorro/Repositories/sensors2024/sensors/nn/models.py", line 135, in forward
+    o = o.reshape((o.shape[0], -1, self.L_out ))
+RuntimeError: shape '[24, -1, 8]' is invalid for input of size 24
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/autoencoder_optuna/
+------
+[I 2024-03-22 11:51:00,097] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[W 2024-03-22 11:51:00,205] Trial 0 failed with parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.25, 'batch_size': 2048, 'lr': 0.0001} because of the following error: AttributeError("module 'optuna' has no attribute 'TrianPruned'").
+Traceback (most recent call last):
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 150, in objective
+    raise optuna.TrianPruned()
+AttributeError: module 'optuna' has no attribute 'TrianPruned'
+[W 2024-03-22 11:51:00,206] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 209, in <module>
+    main(args)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 178, in main
+    study.optimize(objective, n_trials=args.n_trials, gc_after_trial=True)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 66, in _optimize
+    _optimize_sequential(
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 163, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 251, in _run_trial
+    raise func_err
+  File "/home/vitorro/miniconda3/envs/sensors/lib/python3.10/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 150, in objective
+    raise optuna.TrianPruned()
+AttributeError: module 'optuna' has no attribute 'TrianPruned'. Did you mean: 'TrialPruned'?
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/autoencoder_optuna/
+------
+[I 2024-03-22 11:51:27,772] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 1000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:51:27,879] Trial 0 pruned. 
+Trial: 1
+- N Epochs: 5000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:51:28,060] Trial 1 pruned. 
+____ END OF STUDY ___
+
+
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/autoencoder_optuna/
+------
+[I 2024-03-22 11:52:00,406] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 500
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:00,522] Trial 0 pruned. 
+Trial: 1
+- N Epochs: 5000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:00,695] Trial 1 pruned. 
+Trial: 2
+- N Epochs: 10000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:00,862] Trial 2 pruned. 
+Trial: 3
+- N Epochs: 10000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:01,031] Trial 3 pruned. 
+Trial: 4
+- N Epochs: 5000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:01,196] Trial 4 pruned. 
+Trial: 5
+- N Epochs: 500
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:01,365] Trial 5 pruned. 
+Trial: 6
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:01,530] Trial 6 pruned. 
+Trial: 7
+- N Epochs: 10000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:01,695] Trial 7 pruned. 
+Trial: 8
+- N Epochs: 10000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:01,860] Trial 8 pruned. 
+Trial: 9
+- N Epochs: 500
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:02,025] Trial 9 pruned. 
+Trial: 10
+- N Epochs: 500
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:02,196] Trial 10 pruned. 
+Trial: 11
+- N Epochs: 5000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:02,363] Trial 11 pruned. 
+Trial: 12
+- N Epochs: 5000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:02,531] Trial 12 pruned. 
+Trial: 13
+- N Epochs: 500
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:02,698] Trial 13 pruned. 
+Trial: 14
+- N Epochs: 1000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:02,869] Trial 14 pruned. 
+Trial: 15
+- N Epochs: 5000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:03,037] Trial 15 pruned. 
+Trial: 16
+- N Epochs: 500
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:03,205] Trial 16 pruned. 
+Trial: 17
+- N Epochs: 5000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:03,373] Trial 17 pruned. 
+Trial: 18
+- N Epochs: 1000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:03,539] Trial 18 pruned. 
+Trial: 19
+- N Epochs: 5000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:03,707] Trial 19 pruned. 
+Trial: 20
+- N Epochs: 500
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:03,874] Trial 20 pruned. 
+Trial: 21
+- N Epochs: 10000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:04,043] Trial 21 pruned. 
+Trial: 22
+- N Epochs: 10000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:04,210] Trial 22 pruned. 
+Trial: 23
+- N Epochs: 10000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:04,377] Trial 23 pruned. 
+Trial: 24
+- N Epochs: 500
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 11:52:04,544] Trial 24 pruned. 
+____ END OF STUDY ___
+
+
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/autoencoder_optuna/
+------
+[I 2024-03-22 11:52:44,849] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 10000
+- N Layers: 2
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 13:41:46,913] Trial 0 finished with value: {'auc': 0.766} and parameters: {'N_epochs': 10000, 'n_layers': 2, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.01}. Best is trial 0 with value: 0.766.
+Trial: 1
+- N Epochs: 500
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 13:41:47,091] Trial 1 pruned. 
+Trial: 2
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 13:53:36,964] Trial 2 finished with value: {'auc': 0.901} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 2 with value: 0.901.
+Trial: 3
+- N Epochs: 5000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 13:53:37,152] Trial 3 pruned. 
+Trial: 4
+- N Epochs: 500
+- N Layers: 5
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 14:00:18,634] Trial 4 finished with value: {'auc': 0.868} and parameters: {'N_epochs': 500, 'n_layers': 5, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 2 with value: 0.901.
+Trial: 5
+- N Epochs: 5000
+- N Layers: 2
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 14:55:08,681] Trial 5 finished with value: {'auc': 0.76} and parameters: {'N_epochs': 5000, 'n_layers': 2, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.01}. Best is trial 2 with value: 0.901.
+Trial: 6
+- N Epochs: 5000
+- N Layers: 5
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 14:55:08,860] Trial 6 pruned. 
+Trial: 7
+- N Epochs: 5000
+- N Layers: 1
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 15:47:50,693] Trial 7 finished with value: {'auc': 0.786} and parameters: {'N_epochs': 5000, 'n_layers': 1, 'reduction': 0.25, 'batch_size': 2048, 'lr': 0.01}. Best is trial 2 with value: 0.901.
+Trial: 8
+- N Epochs: 500
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 15:53:49,689] Trial 8 finished with value: {'auc': 0.797} and parameters: {'N_epochs': 500, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 2 with value: 0.901.
+Trial: 9
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 16:05:58,521] Trial 9 finished with value: {'auc': 0.918} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 9 with value: 0.918.
+Trial: 10
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 16:17:52,831] Trial 10 finished with value: {'auc': 0.897} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 9 with value: 0.918.
+Trial: 11
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 16:30:05,212] Trial 11 finished with value: {'auc': 0.911} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 9 with value: 0.918.
+Trial: 12
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 16:41:59,398] Trial 12 finished with value: {'auc': 0.902} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 9 with value: 0.918.
+Trial: 13
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 16:53:52,761] Trial 13 finished with value: {'auc': 0.905} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 9 with value: 0.918.
+Trial: 14
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 17:05:47,365] Trial 14 finished with value: {'auc': 0.914} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 9 with value: 0.918.
+Trial: 15
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 17:17:41,039] Trial 15 finished with value: {'auc': 0.897} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 9 with value: 0.918.
+Trial: 16
+- N Epochs: 10000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 19:11:03,455] Trial 16 finished with value: {'auc': 0.841} and parameters: {'N_epochs': 10000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 9 with value: 0.918.
+Trial: 17
+- N Epochs: 1000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 19:22:39,482] Trial 17 finished with value: {'auc': 0.82} and parameters: {'N_epochs': 1000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 9 with value: 0.918.
+Trial: 18
+- N Epochs: 1000
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-22 19:34:00,956] Trial 18 finished with value: {'auc': 0.914} and parameters: {'N_epochs': 1000, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 9 with value: 0.918.
+Trial: 19
+- N Epochs: 10000
+- N Layers: 3
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 21:31:03,250] Trial 19 finished with value: {'auc': 0.777} and parameters: {'N_epochs': 10000, 'n_layers': 3, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.01}. Best is trial 9 with value: 0.918.
+Trial: 20
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 21:42:54,367] Trial 20 finished with value: {'auc': 0.916} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 9 with value: 0.918.
+Trial: 21
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 21:54:45,273] Trial 21 finished with value: {'auc': 0.919} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 21 with value: 0.919.
+Trial: 22
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 22:06:36,176] Trial 22 finished with value: {'auc': 0.932} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 23
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 22:18:26,099] Trial 23 finished with value: {'auc': 0.902} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 24
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-22 22:31:08,119] Trial 24 finished with value: {'auc': 0.911} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+____ END OF STUDY ___
+
+
+Traceback (most recent call last):
+  File "/home/vitorro/Repositories/sensors2024/./dev/test_autoencoder.py", line 2, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/autoencoder_optuna/
+------
+[I 2024-03-23 10:02:55,808] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Reusing previous study
+Trial: 25
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 10:16:12,588] Trial 25 finished with value: {'auc': 0.903} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 26
+- N Epochs: 1000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-23 10:28:30,009] Trial 26 finished with value: {'auc': 0.917} and parameters: {'N_epochs': 1000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 22 with value: 0.932.
+Trial: 27
+- N Epochs: 10000
+- N Layers: 5
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 10:28:30,189] Trial 27 pruned. 
+Trial: 28
+- N Epochs: 500
+- N Layers: 1
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 10:34:35,626] Trial 28 finished with value: {'auc': 0.802} and parameters: {'N_epochs': 500, 'n_layers': 1, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 29
+- N Epochs: 10000
+- N Layers: 2
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 12:25:16,297] Trial 29 finished with value: {'auc': 0.901} and parameters: {'N_epochs': 10000, 'n_layers': 2, 'reduction': 0.25, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 30
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 12:37:24,828] Trial 30 finished with value: {'auc': 0.828} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 31
+- N Epochs: 1000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-23 12:48:56,362] Trial 31 finished with value: {'auc': 0.906} and parameters: {'N_epochs': 1000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 22 with value: 0.932.
+Trial: 32
+- N Epochs: 1000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-23 13:00:27,173] Trial 32 finished with value: {'auc': 0.912} and parameters: {'N_epochs': 1000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 22 with value: 0.932.
+Trial: 33
+- N Epochs: 1000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-23 13:11:54,243] Trial 33 finished with value: {'auc': 0.914} and parameters: {'N_epochs': 1000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 22 with value: 0.932.
+Trial: 34
+- N Epochs: 1000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-23 13:23:24,438] Trial 34 finished with value: {'auc': 0.908} and parameters: {'N_epochs': 1000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 22 with value: 0.932.
+Trial: 35
+- N Epochs: 500
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-23 13:23:24,619] Trial 35 pruned. 
+Trial: 36
+- N Epochs: 1000
+- N Layers: 5
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-23 13:23:24,789] Trial 36 pruned. 
+Trial: 37
+- N Epochs: 5000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-23 14:19:52,657] Trial 37 finished with value: {'auc': 0.878} and parameters: {'N_epochs': 5000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 22 with value: 0.932.
+Trial: 38
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-23 14:19:52,844] Trial 38 pruned. 
+Trial: 39
+- N Epochs: 5000
+- N Layers: 5
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 15:26:03,827] Trial 39 finished with value: {'auc': 0.869} and parameters: {'N_epochs': 5000, 'n_layers': 5, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 40
+- N Epochs: 500
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 15:32:20,282] Trial 40 finished with value: {'auc': 0.816} and parameters: {'N_epochs': 500, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 41
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 15:44:36,841] Trial 41 finished with value: {'auc': 0.908} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 42
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 15:56:41,379] Trial 42 finished with value: {'auc': 0.891} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 43
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 16:08:44,462] Trial 43 finished with value: {'auc': 0.911} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 44
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 16:20:48,260] Trial 44 finished with value: {'auc': 0.905} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 45
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 16:32:53,316] Trial 45 finished with value: {'auc': 0.893} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 46
+- N Epochs: 5000
+- N Layers: 3
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 16:32:53,495] Trial 46 pruned. 
+Trial: 47
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 16:44:55,751] Trial 47 finished with value: {'auc': 0.902} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+Trial: 48
+- N Epochs: 1000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-23 16:56:34,486] Trial 48 finished with value: {'auc': 0.906} and parameters: {'N_epochs': 1000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 22 with value: 0.932.
+Trial: 49
+- N Epochs: 1000
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-23 17:08:39,238] Trial 49 finished with value: {'auc': 0.91} and parameters: {'N_epochs': 1000, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 22 with value: 0.932.
+____ END OF STUDY ___
+
+
+Using cuda
+log dir: /home/vitorro/Repositories/sensors2024/outputs/AE_optuna/
+------
+[I 2024-03-25 11:00:36,522] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 250
+- N Layers: 2
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.001
+- Training loss: MSELoss()
+[I 2024-03-25 11:03:59,348] Trial 0 finished with value: {'auc': 0.694} and parameters: {'N_epochs': 250, 'n_layers': 2, 'reduction': 0.25, 'batch_size': 2048, 'lr': 0.001}. Best is trial 0 with value: 0.694.
+Trial: 1
+- N Epochs: 250
+- N Layers: 5
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.001
+- Training loss: MSELoss()
+[I 2024-03-25 11:07:53,117] Trial 1 finished with value: {'auc': 0.815} and parameters: {'N_epochs': 250, 'n_layers': 5, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.001}. Best is trial 1 with value: 0.815.
+____ END OF STUDY ___
+
+
+usage: test_AE.py [-h] [--n_trials N_TRIALS] [--log-dir LOG_DIR]
+                  [--log_mod LOG_MOD] [--data_size DATA_SIZE]
+                  [--anomaly_level ANOMALY_LEVEL]
+                  [--anomaly_partition ANOMALY_PARTITION]
+                  [--n_anomalies N_ANOMALIES]
+                  [--N_epochs N_EPOCHS [N_EPOCHS ...]]
+                  [--n_layers N_LAYERS [N_LAYERS ...]]
+                  [--reduction REDUCTION [REDUCTION ...]]
+                  [--batch_size BATCH_SIZE [BATCH_SIZE ...]]
+                  [--lr LR [LR ...]] [--device DEVICE] [--reuse] [--no-reuse]
+test_AE.py: error: argument --log_mod: expected one argument
+Using cuda:1
+log dir: /home/vitorro/Repositories/sensors2024/outputs/AE_optuna/
+------
+[I 2024-03-25 11:08:44,003] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 150
+- N Layers: 3
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 11:11:09,462] Trial 0 finished with value: {'auc': 0.957} and parameters: {'N_epochs': 150, 'n_layers': 3, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 0 with value: 0.957.
+Trial: 1
+- N Epochs: 1000
+- N Layers: 2
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-25 11:23:31,026] Trial 1 finished with value: {'auc': 0.697} and parameters: {'N_epochs': 1000, 'n_layers': 2, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 0 with value: 0.957.
+Trial: 2
+- N Epochs: 250
+- N Layers: 3
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.001
+- Training loss: MSELoss()
+[I 2024-03-25 11:27:24,486] Trial 2 finished with value: {'auc': 0.664} and parameters: {'N_epochs': 250, 'n_layers': 3, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.001}. Best is trial 0 with value: 0.957.
+Trial: 3
+- N Epochs: 150
+- N Layers: 5
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 11:30:19,426] Trial 3 finished with value: {'auc': 0.903} and parameters: {'N_epochs': 150, 'n_layers': 5, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 0 with value: 0.957.
+Trial: 4
+- N Epochs: 150
+- N Layers: 1
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 11:32:40,946] Trial 4 finished with value: {'auc': 0.959} and parameters: {'N_epochs': 150, 'n_layers': 1, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 4 with value: 0.959.
+Trial: 5
+- N Epochs: 1000
+- N Layers: 2
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 11:45:08,095] Trial 5 finished with value: {'auc': 0.715} and parameters: {'N_epochs': 1000, 'n_layers': 2, 'reduction': 0.25, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 4 with value: 0.959.
+Trial: 6
+- N Epochs: 500
+- N Layers: 2
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-25 11:51:40,912] Trial 6 finished with value: {'auc': 0.648} and parameters: {'N_epochs': 500, 'n_layers': 2, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.01}. Best is trial 4 with value: 0.959.
+Trial: 7
+- N Epochs: 250
+- N Layers: 3
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 11:55:20,674] Trial 7 finished with value: {'auc': 0.863} and parameters: {'N_epochs': 250, 'n_layers': 3, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 4 with value: 0.959.
+Trial: 8
+- N Epochs: 150
+- N Layers: 5
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 11:57:55,501] Trial 8 finished with value: {'auc': 0.957} and parameters: {'N_epochs': 150, 'n_layers': 5, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 4 with value: 0.959.
+Trial: 9
+- N Epochs: 150
+- N Layers: 2
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.001
+- Training loss: MSELoss()
+[I 2024-03-25 12:00:19,370] Trial 9 finished with value: {'auc': 0.685} and parameters: {'N_epochs': 150, 'n_layers': 2, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.001}. Best is trial 4 with value: 0.959.
+Trial: 10
+- N Epochs: 100
+- N Layers: 1
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-25 12:02:06,484] Trial 10 finished with value: {'auc': 0.671} and parameters: {'N_epochs': 100, 'n_layers': 1, 'reduction': 0.25, 'batch_size': 2048, 'lr': 0.01}. Best is trial 4 with value: 0.959.
+Trial: 11
+- N Epochs: 50
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 12:03:22,038] Trial 11 finished with value: {'auc': 0.889} and parameters: {'N_epochs': 50, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 4 with value: 0.959.
+Trial: 12
+- N Epochs: 150
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 12:05:41,220] Trial 12 finished with value: {'auc': 0.963} and parameters: {'N_epochs': 150, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 12 with value: 0.963.
+Trial: 13
+- N Epochs: 150
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 12:08:00,354] Trial 13 finished with value: {'auc': 0.963} and parameters: {'N_epochs': 150, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 12 with value: 0.963.
+Trial: 14
+- N Epochs: 50
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 12:09:15,788] Trial 14 finished with value: {'auc': 0.889} and parameters: {'N_epochs': 50, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 12 with value: 0.963.
+Trial: 15
+- N Epochs: 100
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.001
+- Training loss: MSELoss()
+[I 2024-03-25 12:11:02,538] Trial 15 finished with value: {'auc': 0.709} and parameters: {'N_epochs': 100, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.001}. Best is trial 12 with value: 0.963.
+Trial: 16
+- N Epochs: 500
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 12:16:59,060] Trial 16 finished with value: {'auc': 0.773} and parameters: {'N_epochs': 500, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 12 with value: 0.963.
+Trial: 17
+- N Epochs: 150
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 12:19:17,296] Trial 17 finished with value: {'auc': 0.964} and parameters: {'N_epochs': 150, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 17 with value: 0.964.
+Trial: 18
+- N Epochs: 150
+- N Layers: 1
+- Reduction: 0.25
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-25 12:21:35,606] Trial 18 finished with value: {'auc': 0.663} and parameters: {'N_epochs': 150, 'n_layers': 1, 'reduction': 0.25, 'batch_size': 2048, 'lr': 0.01}. Best is trial 17 with value: 0.964.
+Trial: 19
+- N Epochs: 150
+- N Layers: 5
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.001
+- Training loss: MSELoss()
+[I 2024-03-25 12:24:10,856] Trial 19 finished with value: {'auc': 0.954} and parameters: {'N_epochs': 150, 'n_layers': 5, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.001}. Best is trial 17 with value: 0.964.
+Trial: 20
+- N Epochs: 1000
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 12:35:20,788] Trial 20 finished with value: {'auc': 0.729} and parameters: {'N_epochs': 1000, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 17 with value: 0.964.
+Trial: 21
+- N Epochs: 150
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 12:37:38,972] Trial 21 finished with value: {'auc': 0.962} and parameters: {'N_epochs': 150, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 17 with value: 0.964.
+Trial: 22
+- N Epochs: 150
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 12:39:57,384] Trial 22 finished with value: {'auc': 0.963} and parameters: {'N_epochs': 150, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 17 with value: 0.964.
+Trial: 23
+- N Epochs: 150
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 12:42:15,755] Trial 23 finished with value: {'auc': 0.962} and parameters: {'N_epochs': 150, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 17 with value: 0.964.
+Trial: 24
+- N Epochs: 150
+- N Layers: 1
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 12:44:34,007] Trial 24 finished with value: {'auc': 0.964} and parameters: {'N_epochs': 150, 'n_layers': 1, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 17 with value: 0.964.
+____ END OF STUDY ___
+
+
+Using cuda:1
+log dir: /home/vitorro/Repositories/sensors2024/outputs/AE_optuna/
+------
+[I 2024-03-25 13:19:52,844] A new study created in memory with name: maximize_autoencoder_auc: 20parts_10level_1anomaly
+Trial: 0
+- N Epochs: 100
+- N Layers: 5
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-25 13:22:05,645] Trial 0 finished with value: {'auc': 0.947} and parameters: {'N_epochs': 100, 'n_layers': 5, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.01}. Best is trial 0 with value: 0.947.
+Trial: 1
+- N Epochs: 100
+- N Layers: 1
+- Reduction: 0.4
+- Batch size: 2048
+- Learing rate: 0.001
+- Training loss: MSELoss()
+[I 2024-03-25 13:23:54,937] Trial 1 finished with value: {'auc': 0.719} and parameters: {'N_epochs': 100, 'n_layers': 1, 'reduction': 0.4, 'batch_size': 2048, 'lr': 0.001}. Best is trial 0 with value: 0.947.
+Trial: 2
+- N Epochs: 125
+- N Layers: 4
+- Reduction: 0.75
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 13:26:25,698] Trial 2 finished with value: {'auc': 0.957} and parameters: {'N_epochs': 125, 'n_layers': 4, 'reduction': 0.75, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 2 with value: 0.957.
+Trial: 3
+- N Epochs: 150
+- N Layers: 4
+- Reduction: 0.4
+- Batch size: 2048
+- Learing rate: 0.01
+- Training loss: MSELoss()
+[I 2024-03-25 13:29:11,139] Trial 3 finished with value: {'auc': 0.787} and parameters: {'N_epochs': 150, 'n_layers': 4, 'reduction': 0.4, 'batch_size': 2048, 'lr': 0.01}. Best is trial 2 with value: 0.957.
+Trial: 4
+- N Epochs: 150
+- N Layers: 4
+- Reduction: 0.5
+- Batch size: 2048
+- Learing rate: 0.0001
+- Training loss: MSELoss()
+[I 2024-03-25 13:31:57,509] Trial 4 finished with value: {'auc': 0.947} and parameters: {'N_epochs': 150, 'n_layers': 4, 'reduction': 0.5, 'batch_size': 2048, 'lr': 0.0001}. Best is trial 2 with value: 0.957.
+Trial: 5
+- N Epochs: 50
+- N Layers: 2
+- Reduction: 0.6
+- Batch size: 2048
+- Learing rate: 0.001
+- Training loss: MSELoss()

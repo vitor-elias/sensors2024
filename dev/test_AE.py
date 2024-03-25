@@ -117,11 +117,7 @@ def main(args):
 
         gc.collect()
 
-        # Possible hyperparameters
-        conv1d_n_feats = 3
-        conv1d_kernel_size = 60
-        conv1d_stride = 30
-        
+        # Possible hyperparameters     
         N_epochs = trial.suggest_categorical('N_epochs', args.N_epochs)
         n_layers = trial.suggest_categorical('n_layers', args.n_layers)
         reduction = trial.suggest_categorical('reduction', args.reduction)
@@ -142,8 +138,7 @@ def main(args):
 
         ###
 
-        model = models.Autoencoder(conv1d_n_feats, conv1d_kernel_size, conv1d_stride, 
-                        n_timestamps, n_layers, reduction)
+        model = models.AE(n_timestamps, n_layers, reduction)                        
         model = model.to(device)
 
         if model.encoder[-2].out_features < 2:
@@ -186,7 +181,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--n_trials', type=int, default=1)
-    parser.add_argument('--log-dir', type=str, default=root_dir+'/outputs/autoencoder_optuna/')
+    parser.add_argument('--log-dir', type=str, default=root_dir+'/outputs/AE_optuna/')
     parser.add_argument('--log_mod', type=str, default='')
 
     parser.add_argument('--data_size', type=int, default=100)
@@ -194,11 +189,11 @@ if __name__ == "__main__":
     parser.add_argument('--anomaly_partition', type=int, default=20)
     parser.add_argument('--n_anomalies', type=int, default=1)
 
-    parser.add_argument('--N_epochs', type=int, nargs='+', default=[500, 1000, 5000, 10000])
-    parser.add_argument('--n_layers', type=int, nargs='+', default=[1, 2, 3, 5])
-    parser.add_argument('--reduction', type=float, nargs='+', default=[0.25, 0.5, 0.75])
+    parser.add_argument('--N_epochs', type=int, nargs='+', default=[50, 75, 100, 125, 150, 200, 500])
+    parser.add_argument('--n_layers', type=int, nargs='+', default=[1, 2, 3, 4, 5])
+    parser.add_argument('--reduction', type=float, nargs='+', default=[0.25, 0.4, 0.5, 0.6, 0.75])
     parser.add_argument('--batch_size', type=int, nargs='+', default=[2048])
-    parser.add_argument('--lr', type=float, nargs='+', default=[1e-2, 1e-4])
+    parser.add_argument('--lr', type=float, nargs='+', default=[1e-2, 1e-3, 1e-4])
 
     parser.add_argument('--device', type=str, default='cuda')
 

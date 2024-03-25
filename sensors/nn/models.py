@@ -150,6 +150,68 @@ class Autoencoder(nn.Module):
             if hasattr(layer, 'reset_parameters'):
                 layer.reset_parameters()
 
+##############################################################################################################    
+
+class AE(nn.Module):
+
+    # >  MLP encoder > MLP decoder 
+
+    def __init__(self,
+                 n_timestamps,
+                 n_encoding_layers,
+                 reduction
+                 ):
+        
+        super(AE, self).__init__() 
+
+        mlp_in = n_timestamps
+
+        mlp_in_list = []
+        mlp_in_list.append(mlp_in)
+
+        # Encoder
+        encoder_layers = OrderedDict()
+        encoder_layers['linear_0'] = Linear(mlp_in, round( mlp_in * reduction ))
+        encoder_layers['relu_0'] = ReLU()
+
+        for n in range(1, n_encoding_layers):
+            mlp_in = round( mlp_in * reduction )
+            mlp_in_list.append(mlp_in)
+
+            encoder_layers[f'linear_{n}'] = Linear(mlp_in, round( mlp_in * reduction ))
+            encoder_layers[f'relu_{n}'] = ReLU()
+        
+        mlp_in_list.append( round(mlp_in * reduction ))
+        self.encoder = Sequential(encoder_layers)
+
+        # Decoder
+
+        decoder_layers = OrderedDict()
+        for n in range(0, n_encoding_layers-1):
+            decoder_layers[f'linear_{n}'] = Linear( mlp_in_list[-n-1], mlp_in_list[-n-2] )
+            decoder_layers[f'relu_{n}'] = ReLU()
+
+        decoder_layers[f'linear_out'] = Linear( mlp_in_list[1], mlp_in_list[0] )
+        
+        self.decoder = Sequential(decoder_layers)
+
+    def forward(self, x):
+
+        z = self.encoder(x)
+        o = self.decoder(z)
+
+        return o
+
+
+    def reset_parameters(self):
+
+        for layer in self.encoder.children():
+            if hasattr(layer, 'reset_parameters'):
+                layer.reset_parameters()
+        for layer in self.decoder.children():
+            if hasattr(layer, 'reset_parameters'):
+                layer.reset_parameters()
+
 
 
 
